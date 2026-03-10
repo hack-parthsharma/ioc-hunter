@@ -4,7 +4,7 @@ Real-time IOC aggregator that fetches indicators of compromise from **12+ open-s
 
 ## 🚀 Live Demo
 
-**https://YOUR_USERNAME.github.io/ioc-hunter/**
+**https://hack-parthsharma.github.io/ioc-hunter/**
 
 ## Features
 
