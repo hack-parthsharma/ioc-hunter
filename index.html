@@ -1302,7 +1302,7 @@ async function startScan() {
   if (btn.disabled) return;
   btn.disabled = true;
   btn.classList.add('loading');
-  document.getElementById('statusText').textContent = 'SCANNING...';
+  document.getElementById('statusText').textContent = 'FETCHING...';
   document.getElementById('progressBar').classList.add('active');
   document.getElementById('scanLog').classList.add('active');
 
@@ -1310,61 +1310,64 @@ async function startScan() {
   feedCounts = {};
   scanStartTime = Date.now();
 
-  const feedKeys = Object.keys(FEEDS);
-  const total = feedKeys.length;
-  let completed = 0;
+  logScan('Loading IOC data from threat intel feeds...');
+  document.getElementById('progressFill').style.width = '30%';
 
-  for (const key of feedKeys) {
-    const feed = FEEDS[key];
-    logScan(`Querying ${feed.name}...`);
+  try {
+    const resp = await fetch('ioc_data.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('ioc_data.json not found');
+    const data = await resp.json();
 
-    try {
-      const opts = { method: feed.method };
-      if (feed.method === 'POST') {
-        opts.body = feed.body || '';
-        opts.headers = feed.headers || { 'Content-Type': 'application/json' };
+    document.getElementById('progressFill').style.width = '60%';
+    logScan('Parsing and classifying IOCs...');
+
+    if (!data.iocs || data.iocs.length === 0) throw new Error('No IOC data available');
+
+    allIOCs = data.iocs;
+    scanStartTime = new Date(data.scan_time).getTime();
+
+    // Load feed stats
+    if (data.feed_stats) {
+      const feedMap = {
+        'AlienVault OTX': 'feedOTX',
+        'Abuse.ch URLhaus': 'feedURLhaus',
+        'Abuse.ch ThreatFox': 'feedThreatFox',
+        'Abuse.ch MalBazaar': 'feedMalBazaar',
+        'Abuse.ch FeodoTracker': 'feedFeodo',
+        'Blocklist.de': 'feedBlocklist',
+        'CINSscore': 'feedCINS',
+        'OpenPhish': 'feedOpenPhish',
+        'PhishTank': 'feedPhishTank',
+        'C2 IntelFeeds': 'feedC2Intel',
+        'DigitalSide TI': 'feedDigitalSide',
+        'CISA KEV': 'feedCISA'
+      };
+      for (const [name, count] of Object.entries(data.feed_stats)) {
+        const feedId = feedMap[name];
+        if (feedId) {
+          feedCounts[name] = count;
+          const el = document.getElementById(feedId);
+          if (el) el.textContent = count;
+        }
       }
-
-      const resp = await fetch(feed.url, opts);
-
-      let data;
-      if (feed.isText) {
-        data = await resp.text();
-      } else {
-        data = await resp.json();
-      }
-
-      const iocs = feed.parse(data);
-      feedCounts[key] = iocs.length;
-      allIOCs = allIOCs.concat(iocs);
-      logScan(`${feed.name}: ${iocs.length} IOCs collected`);
-
-    } catch (err) {
-      console.warn(`Feed ${feed.name} failed:`, err.message);
-      feedCounts[key] = 0;
-      logScan(`${feed.name}: ⚠ Feed unavailable`);
     }
 
-    completed++;
-    document.getElementById('progressFill').style.width = ((completed / total) * 100) + '%';
+    document.getElementById('progressFill').style.width = '100%';
+    logScan(`Loaded ${allIOCs.length} IOCs from ${Object.values(feedCounts).filter(v=>v>0).length} feeds`);
 
-    // Brief pause between feeds to avoid rate limits
-    await new Promise(r => setTimeout(r, 300));
+    await new Promise(r => setTimeout(r, 500));
+    finishScan();
+
+  } catch (err) {
+    console.error('Failed to load IOC data:', err);
+    document.getElementById('progressBar').classList.remove('active');
+    document.getElementById('scanLog').classList.remove('active');
+    btn.disabled = false;
+    btn.classList.remove('loading');
+    document.getElementById('statusText').textContent = 'ERROR';
+    showToast('⚠ Could not load IOC data — ensure ioc_data.json exists');
+    setTimeout(() => { document.getElementById('statusText').textContent = 'READY'; }, 3000);
   }
-
-  // Deduplicate by value
-  const seen = new Set();
-  allIOCs = allIOCs.filter(ioc => {
-    if (!ioc.value || seen.has(ioc.value)) return false;
-    seen.add(ioc.value);
-    return true;
-  });
-
-  // Sort by threat priority
-  const threatOrder = { critical: 0, high: 1, medium: 2, low: 3, info: 4 };
-  allIOCs.sort((a, b) => (threatOrder[a.threat] ?? 4) - (threatOrder[b.threat] ?? 4));
-
-  finishScan();
 }
 
 function finishScan() {
