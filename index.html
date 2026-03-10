@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IOC HUNTER — Threat Intelligence IOC Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #111827;
+    --bg-card: #151d2e;
+    --bg-card-hover: #1a2540;
+    --border: #1e2d4a;
+    --border-glow: #2563eb33;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-red: #ef4444;
+    --accent-orange: #f97316;
+    --accent-yellow: #eab308;
+    --accent-green: #22c55e;
+    --accent-purple: #a855f7;
+    --accent-pink: #ec4899;
+    --tier-critical: #ff1744;
+    --tier-high: #ff6d00;
+    --tier-medium: #ffd600;
+    --tier-low: #00e676;
+    --tier-info: #448aff;
+    --glow-blue: 0 0 20px rgba(59, 130, 246, 0.3);
+    --glow-red: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Animated background grid */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: ambientPulse 15s ease-in-out infinite;
+  }
+
+  @keyframes ambientPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 24px;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(21,29,46,0.8) 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan), var(--accent-purple));
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: var(--glow-blue);
+  }
+
+  .header-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #fff 0%, var(--accent-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .header-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .status-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-green);
+  }
+
+  .status-dot {
+    width: 8px; height: 8px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  }
+
+  .scan-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+  }
+
+  .scan-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(59,130,246,0.4);
+  }
+
+  .scan-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .scan-btn .spinner {
+    display: none;
+    width: 14px; height: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  .scan-btn.loading .spinner { display: block; }
+  .scan-btn.loading .btn-text { display: none; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ===== STATS BAR ===== */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+  }
+
+  .stat-card:nth-child(1)::after { background: var(--accent-blue); }
+  .stat-card:nth-child(2)::after { background: var(--tier-critical); }
+  .stat-card:nth-child(3)::after { background: var(--tier-high); }
+  .stat-card:nth-child(4)::after { background: var(--tier-medium); }
+  .stat-card:nth-child(5)::after { background: var(--tier-low); }
+  .stat-card:nth-child(6)::after { background: var(--accent-purple); }
+
+  .stat-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ===== CONTROLS ===== */
+  .controls-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .filter-group {
+    display: flex;
+    gap: 6px;
+  }
+
+  .filter-btn {
+    padding: 7px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-btn:hover { border-color: var(--accent-blue); color: var(--text-primary); }
+  .filter-btn.active { background: rgba(59,130,246,0.15); border-color: var(--accent-blue); color: var(--accent-blue); }
+
+  .search-box {
+    flex: 1;
+    min-width: 200px;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-box:focus { border-color: var(--accent-blue); }
+  .search-box::placeholder { color: var(--text-muted); }
+
+  .export-btn {
+    padding: 8px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .export-btn:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+
+  /* ===== EXECUTIVE BRIEFING ===== */
+  .briefing-panel {
+    background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(168,85,247,0.05) 100%);
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .briefing-panel.visible { display: block; animation: fadeIn 0.5s ease; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .briefing-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .briefing-icon {
+    width: 32px; height: 32px;
+    background: rgba(59,130,246,0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .briefing-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+  }
+
+  .briefing-content {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  .briefing-content strong { color: var(--text-primary); }
+
+  /* ===== MAIN LAYOUT ===== */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+  }
+
+  /* ===== FEED SIDEBAR ===== */
+  .feed-sidebar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+  }
+
+  .feed-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .feed-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+    cursor: default;
+  }
+
+  .feed-item:hover { background: rgba(59,130,246,0.05); }
+
+  .feed-item-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .feed-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .feed-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .feed-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    color: var(--text-muted);
+  }
+
+  /* ===== IOC TABLE ===== */
+  .ioc-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .ioc-table-header {
+    display: grid;
+    grid-template-columns: 90px 1fr 120px 100px 130px 80px;
+    gap: 12px;
+    padding: 14px 20px;
+    background: rgba(0,0,0,0.3);
+    border-bottom: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .ioc-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 120px 100px 130px 80px;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(30,45,74,0.5);
+    align-items: center;
+    transition: all 0.2s;
+    animation: rowSlide 0.4s ease;
+  }
+
+  @keyframes rowSlide { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+
+  .ioc-row:hover { background: rgba(59,130,246,0.04); }
+
+  .ioc-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .ioc-type.ip { background: rgba(59,130,246,0.15); color: var(--accent-blue); }
+  .ioc-type.domain { background: rgba(168,85,247,0.15); color: var(--accent-purple); }
+  .ioc-type.hash { background: rgba(6,182,212,0.15); color: var(--accent-cyan); }
+  .ioc-type.url { background: rgba(236,72,153,0.15); color: var(--accent-pink); }
+  .ioc-type.email { background: rgba(249,115,22,0.15); color: var(--accent-orange); }
+  .ioc-type.cve { background: rgba(239,68,68,0.15); color: var(--accent-red); }
+
+  .ioc-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-primary);
+    word-break: break-all;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .ioc-value:hover { color: var(--accent-cyan); }
+  .ioc-value::after {
+    content: ' 📋';
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .ioc-value:hover::after { opacity: 0.6; }
+
+  .ioc-source {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .ioc-threat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .threat-critical { background: rgba(255,23,68,0.15); color: var(--tier-critical); }
+  .threat-high { background: rgba(255,109,0,0.15); color: var(--tier-high); }
+  .threat-medium { background: rgba(255,214,0,0.15); color: var(--tier-medium); }
+  .threat-low { background: rgba(0,230,118,0.15); color: var(--tier-low); }
+  .threat-info { background: rgba(68,138,255,0.15); color: var(--tier-info); }
+
+  .ioc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .ioc-tag {
+    font-size: 9px;
+    padding: 2px 6px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .ioc-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* ===== EMPTY / LOADING STATES ===== */
+  .empty-state {
+    text-align: center;
+    padding: 80px 40px;
+  }
+
+  .empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+
+  .empty-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+
+  .empty-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 3px;
+    background: rgba(59,130,246,0.1);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: none;
+  }
+
+  .progress-bar.active { display: block; }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    width: 0%;
+  }
+
+  .scan-log {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    padding: 8px 0;
+    margin-bottom: 12px;
+    display: none;
+  }
+
+  .scan-log.active { display: block; }
+
+  /* ===== PAGINATION ===== */
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .page-info {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .page-btns {
+    display: flex;
+    gap: 6px;
+  }
+
+  .page-btn {
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .page-btn:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+  .page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  /* ===== TOAST ===== */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    padding: 12px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-primary);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    z-index: 1000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* ===== REPORT MODAL ===== */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 900;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+  }
+
+  .modal h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--accent-cyan);
+  }
+
+  .modal-close {
+    float: right;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .report-content {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+
+  .report-content h3 {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-primary);
+    font-size: 14px;
+    margin: 18px 0 8px;
+  }
+
+  .report-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+  }
+
+  .report-content th, .report-content td {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .report-content th {
+    background: rgba(0,0,0,0.3);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+
+  .modal-btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+  }
+
+  .modal-btn:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+
+  .modal-btn.primary {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    border: none;
+    color: #fff;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1100px) {
+    .main-grid { grid-template-columns: 1fr; }
+    .feed-sidebar { position: static; }
+    .ioc-table-header, .ioc-row {
+      grid-template-columns: 70px 1fr 100px 80px;
+    }
+    .ioc-tags, .ioc-time { display: none; }
+    .stats-bar { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 600px) {
+    .header { flex-direction: column; gap: 14px; text-align: center; }
+    .header-right { flex-wrap: wrap; justify-content: center; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .ioc-table-header, .ioc-row {
+      grid-template-columns: 60px 1fr 70px;
+    }
+    .ioc-source { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo-icon">🎯</div>
+      <div>
+        <div class="header-title">IOC HUNTER</div>
+        <div class="header-subtitle">24h Threat Intelligence IOC Aggregator</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span id="statusText">READY</span>
+      </div>
+      <button class="scan-btn" id="scanBtn" onclick="startScan()">
+        <span class="spinner"></span>
+        <span class="btn-text">▶ FETCH IOCs</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PROGRESS -->
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+  <div class="scan-log" id="scanLog"></div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-value" id="statTotal" style="color:var(--accent-blue)">0</div>
+      <div class="stat-label">Total IOCs</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="statCritical" style="color:var(--tier-critical)">0</div>
+      <div class="stat-label">Critical</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="statHigh" style="color:var(--tier-high)">0</div>
+      <div class="stat-label">High</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="statMedium" style="color:var(--tier-medium)">0</div>
+      <div class="stat-label">Medium</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="statLow" style="color:var(--tier-low)">0</div>
+      <div class="stat-label">Low</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="statFeeds" style="color:var(--accent-purple)">0</div>
+      <div class="stat-label">Feeds Active</div>
+    </div>
+  </div>
+
+  <!-- BRIEFING -->
+  <div class="briefing-panel" id="briefingPanel">
+    <div class="briefing-header">
+      <div class="briefing-icon">📋</div>
+      <div class="briefing-title">Executive Threat Briefing</div>
+    </div>
+    <div class="briefing-content" id="briefingContent"></div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls-row">
+    <div class="filter-group" id="typeFilters">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All</button>
+      <button class="filter-btn" data-filter="ip" onclick="setFilter('ip',this)">IPs</button>
+      <button class="filter-btn" data-filter="domain" onclick="setFilter('domain',this)">Domains</button>
+      <button class="filter-btn" data-filter="hash" onclick="setFilter('hash',this)">Hashes</button>
+      <button class="filter-btn" data-filter="url" onclick="setFilter('url',this)">URLs</button>
+      <button class="filter-btn" data-filter="email" onclick="setFilter('email',this)">Emails</button>
+      <button class="filter-btn" data-filter="cve" onclick="setFilter('cve',this)">CVEs</button>
+    </div>
+    <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search IOCs, sources, tags..." oninput="applyFilters()">
+    <button class="export-btn" onclick="exportCSV()">⬇ CSV</button>
+    <button class="export-btn" onclick="exportJSON()">⬇ JSON</button>
+    <button class="export-btn" onclick="openReport()">📊 Report</button>
+    <button class="export-btn" onclick="openOutlook()">📧 Outlook</button>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+    <!-- FEED SIDEBAR -->
+    <aside class="feed-sidebar">
+      <div class="feed-title">📡 Intel Feeds</div>
+      <div id="feedList">
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:var(--accent-blue)"></div><span class="feed-name">AlienVault OTX</span></div><span class="feed-count" id="feedOTX">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:var(--accent-red)"></div><span class="feed-name">Abuse.ch URLhaus</span></div><span class="feed-count" id="feedURLhaus">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:var(--accent-orange)"></div><span class="feed-name">Abuse.ch ThreatFox</span></div><span class="feed-count" id="feedThreatFox">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:var(--accent-cyan)"></div><span class="feed-name">Abuse.ch MalBazaar</span></div><span class="feed-count" id="feedMalBazaar">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:var(--accent-green)"></div><span class="feed-name">Abuse.ch FeodoTracker</span></div><span class="feed-count" id="feedFeodo">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:var(--accent-purple)"></div><span class="feed-name">Blocklist.de</span></div><span class="feed-count" id="feedBlocklist">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:var(--accent-yellow)"></div><span class="feed-name">CINSscore</span></div><span class="feed-count" id="feedCINS">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:var(--accent-pink)"></div><span class="feed-name">OpenPhish</span></div><span class="feed-count" id="feedOpenPhish">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:#8bc34a"></div><span class="feed-name">PhishTank</span></div><span class="feed-count" id="feedPhishTank">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:#ff9800"></div><span class="feed-name">C2 IntelFeeds</span></div><span class="feed-count" id="feedC2Intel">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:#e91e63"></div><span class="feed-name">DigitalSide TI</span></div><span class="feed-count" id="feedDigitalSide">—</span></div>
+        <div class="feed-item"><div class="feed-item-left"><div class="feed-dot" style="background:#9c27b0"></div><span class="feed-name">CISA KEV</span></div><span class="feed-count" id="feedCISA">—</span></div>
+      </div>
+    </aside>
+
+    <!-- IOC TABLE -->
+    <div class="ioc-panel">
+      <div class="ioc-table-header">
+        <div>Type</div>
+        <div>Indicator</div>
+        <div>Source</div>
+        <div>Threat Level</div>
+        <div>Tags</div>
+        <div>Time</div>
+      </div>
+      <div id="iocTableBody">
+        <div class="empty-state">
+          <div class="empty-icon">🎯</div>
+          <div class="empty-title">IOC Hunter Ready</div>
+          <div class="empty-desc">Click "FETCH IOCs" to aggregate indicators from 12+ threat intelligence feeds</div>
+        </div>
+      </div>
+      <div class="pagination" id="pagination" style="display:none">
+        <span class="page-info" id="pageInfo"></span>
+        <div class="page-btns">
+          <button class="page-btn" id="prevBtn" onclick="changePage(-1)">← Prev</button>
+          <button class="page-btn" id="nextBtn" onclick="changePage(1)">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- REPORT MODAL -->
+<div class="modal-overlay" id="reportModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeReport()">✕</button>
+    <h2>🎯 IOC Intelligence Report</h2>
+    <div class="report-content" id="reportContent"></div>
+    <div class="modal-actions">
+      <button class="modal-btn" onclick="copyReport()">📋 Copy HTML</button>
+      <button class="modal-btn" onclick="downloadReport()">⬇ Download .html</button>
+      <button class="modal-btn primary" onclick="closeReport()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================================
+// IOC HUNTER — Threat Intelligence IOC Aggregator
+// ============================================================================
+
+let allIOCs = [];
+let filteredIOCs = [];
+let currentFilter = 'all';
+let currentPage = 0;
+const PAGE_SIZE = 50;
+let feedCounts = {};
+let scanStartTime = null;
+
+// ===== FEED CONFIGURATIONS =====
+// Each feed has a URL, parser, and IOC type mapping
+const FEEDS = {
+  // --- Abuse.ch URLhaus (recent URLs) ---
+  urlhaus: {
+    name: 'Abuse.ch URLhaus',
+    feedId: 'feedURLhaus',
+    url: 'https://urlhaus-api.abuse.ch/v1/urls/recent/limit/100/',
+    method: 'POST',
+    parse: (data) => {
+      if (!data.urls) return [];
+      return data.urls.slice(0, 80).map(u => ({
+        type: 'url',
+        value: u.url,
+        source: 'URLhaus',
+        threat: mapThreat(u.threat || 'malware_download'),
+        tags: [u.threat || 'malware', u.url_status || ''].filter(Boolean),
+        time: u.dateadded || new Date().toISOString(),
+        raw: u
+      }));
+    }
+  },
+  // --- Abuse.ch ThreatFox (recent IOCs) ---
+  threatfox: {
+    name: 'Abuse.ch ThreatFox',
+    feedId: 'feedThreatFox',
+    url: 'https://threatfox-api.abuse.ch/api/v1/',
+    method: 'POST',
+    body: JSON.stringify({ query: 'get_iocs', days: 1 }),
+    parse: (data) => {
+      if (!data.data) return [];
+      return data.data.slice(0, 100).map(i => ({
+        type: detectType(i.ioc),
+        value: i.ioc,
+        source: 'ThreatFox',
+        threat: mapThreatLevel(i.threat_type, i.confidence_level),
+        tags: [i.threat_type || '', i.malware || '', i.malware_alias || ''].filter(Boolean),
+        time: i.first_seen || new Date().toISOString(),
+        raw: i
+      }));
+    }
+  },
+  // --- Abuse.ch MalBazaar (recent samples) ---
+  malbazaar: {
+    name: 'Abuse.ch MalBazaar',
+    feedId: 'feedMalBazaar',
+    url: 'https://mb-api.abuse.ch/api/v1/',
+    method: 'POST',
+    body: new URLSearchParams({ query: 'get_recent', selector: '100' }).toString(),
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    parse: (data) => {
+      if (!data.data) return [];
+      return data.data.slice(0, 80).map(s => ({
+        type: 'hash',
+        value: s.sha256_hash,
+        source: 'MalBazaar',
+        threat: mapMalBazaarThreat(s),
+        tags: [s.signature || '', s.file_type || '', s.reporter || ''].filter(Boolean),
+        time: s.first_seen || new Date().toISOString(),
+        raw: s
+      }));
+    }
+  },
+  // --- Abuse.ch Feodo Tracker (C2 IPs) ---
+  feodo: {
+    name: 'Abuse.ch FeodoTracker',
+    feedId: 'feedFeodo',
+    url: 'https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json',
+    method: 'GET',
+    parse: (data) => {
+      if (!Array.isArray(data)) return [];
+      return data.slice(0, 80).map(e => ({
+        type: 'ip',
+        value: e.ip_address ? `${e.ip_address}:${e.port}` : (e.dst_ip || e.ip || ''),
+        source: 'FeodoTracker',
+        threat: 'critical',
+        tags: [e.malware || 'botnet', 'c2', e.status || ''].filter(Boolean),
+        time: e.first_seen || new Date().toISOString(),
+        raw: e
+      }));
+    }
+  },
+  // --- Blocklist.de (attacking IPs) ---
+  blocklist: {
+    name: 'Blocklist.de',
+    feedId: 'feedBlocklist',
+    url: 'https://lists.blocklist.de/lists/all.txt',
+    method: 'GET',
+    isText: true,
+    parse: (text) => {
+      const lines = text.split('\n').filter(l => l.trim() && !l.startsWith('#'));
+      return lines.slice(0, 60).map(ip => ({
+        type: 'ip',
+        value: ip.trim(),
+        source: 'Blocklist.de',
+        threat: 'high',
+        tags: ['brute-force', 'attacker'],
+        time: new Date().toISOString(),
+        raw: { ip: ip.trim() }
+      }));
+    }
+  },
+  // --- CI Army / CINSscore (bad IPs) ---
+  cins: {
+    name: 'CINSscore',
+    feedId: 'feedCINS',
+    url: 'https://cinsscore.com/list/ci-badguys.txt',
+    method: 'GET',
+    isText: true,
+    parse: (text) => {
+      const lines = text.split('\n').filter(l => l.trim() && !l.startsWith('#'));
+      return lines.slice(0, 60).map(ip => ({
+        type: 'ip',
+        value: ip.trim(),
+        source: 'CINSscore',
+        threat: 'medium',
+        tags: ['malicious', 'scanning'],
+        time: new Date().toISOString(),
+        raw: { ip: ip.trim() }
+      }));
+    }
+  },
+  // --- OpenPhish (phishing URLs) ---
+  openphish: {
+    name: 'OpenPhish',
+    feedId: 'feedOpenPhish',
+    url: 'https://openphish.com/feed.txt',
+    method: 'GET',
+    isText: true,
+    parse: (text) => {
+      const lines = text.split('\n').filter(l => l.trim().startsWith('http'));
+      return lines.slice(0, 60).map(url => ({
+        type: 'url',
+        value: url.trim(),
+        source: 'OpenPhish',
+        threat: 'high',
+        tags: ['phishing', 'credential-theft'],
+        time: new Date().toISOString(),
+        raw: { url: url.trim() }
+      }));
+    }
+  },
+  // --- DigitalSide Threat-Intel (IPs) ---
+  digitalside: {
+    name: 'DigitalSide TI',
+    feedId: 'feedDigitalSide',
+    url: 'https://raw.githubusercontent.com/davidonzo/Threat-Intel/master/lists/latestips.txt',
+    method: 'GET',
+    isText: true,
+    parse: (text) => {
+      const lines = text.split('\n').filter(l => l.trim() && !l.startsWith('#'));
+      return lines.slice(0, 50).map(ip => ({
+        type: 'ip',
+        value: ip.trim(),
+        source: 'DigitalSide',
+        threat: 'high',
+        tags: ['malware', 'c2'],
+        time: new Date().toISOString(),
+        raw: { ip: ip.trim() }
+      }));
+    }
+  },
+  // --- CISA Known Exploited Vulnerabilities ---
+  cisa: {
+    name: 'CISA KEV',
+    feedId: 'feedCISA',
+    url: 'https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json',
+    method: 'GET',
+    parse: (data) => {
+      if (!data.vulnerabilities) return [];
+      const now = new Date();
+      const dayAgo = new Date(now - 86400000 * 7); // last 7 days for recency
+      return data.vulnerabilities
+        .filter(v => new Date(v.dateAdded) >= dayAgo)
+        .slice(0, 40)
+        .map(v => ({
+          type: 'cve',
+          value: v.cveID,
+          source: 'CISA KEV',
+          threat: 'critical',
+          tags: [v.vendorProject || '', v.product || '', 'actively-exploited'].filter(Boolean),
+          time: v.dateAdded || new Date().toISOString(),
+          raw: v
+        }));
+    }
+  },
+  // --- AlienVault OTX (pulse-based) ---
+  otx: {
+    name: 'AlienVault OTX',
+    feedId: 'feedOTX',
+    url: 'https://otx.alienvault.com/api/v1/pulses/activity?modified_since=' + getYesterday() + '&limit=20',
+    method: 'GET',
+    parse: (data) => {
+      if (!data.results) return [];
+      const iocs = [];
+      data.results.forEach(pulse => {
+        if (pulse.indicators) {
+          pulse.indicators.slice(0, 10).forEach(ind => {
+            iocs.push({
+              type: mapOTXType(ind.type),
+              value: ind.indicator,
+              source: 'OTX',
+              threat: mapOTXThreat(pulse),
+              tags: (pulse.tags || []).slice(0, 3),
+              time: ind.created || pulse.created,
+              raw: ind
+            });
+          });
+        }
+      });
+      return iocs.slice(0, 80);
+    }
+  },
+  // --- C2 Intel Feeds (C2 servers) ---
+  c2intel: {
+    name: 'C2 IntelFeeds',
+    feedId: 'feedC2Intel',
+    url: 'https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv',
+    method: 'GET',
+    isText: true,
+    parse: (text) => {
+      const lines = text.split('\n').filter(l => l.trim() && !l.startsWith('#') && !l.startsWith('ip'));
+      return lines.slice(0, 60).map(line => {
+        const parts = line.split(',');
+        return {
+          type: 'ip',
+          value: (parts[0] || '').trim(),
+          source: 'C2 Intel',
+          threat: 'critical',
+          tags: ['c2', parts[1] || ''].filter(Boolean),
+          time: parts[2] || new Date().toISOString(),
+          raw: { ip: (parts[0] || '').trim(), malware: parts[1] || '' }
+        };
+      }).filter(i => i.value);
+    }
+  },
+  // --- PhishTank (verified phishing) ---
+  phishtank: {
+    name: 'PhishTank',
+    feedId: 'feedPhishTank',
+    url: 'https://data.phishtank.com/data/online-valid.json',
+    method: 'GET',
+    parse: (data) => {
+      if (!Array.isArray(data)) return [];
+      return data.slice(0, 60).map(p => ({
+        type: 'url',
+        value: p.url,
+        source: 'PhishTank',
+        threat: 'high',
+        tags: ['phishing', p.target || ''].filter(Boolean),
+        time: p.verification_time || p.submission_time || new Date().toISOString(),
+        raw: p
+      }));
+    }
+  }
+};
+
+// ===== HELPER FUNCTIONS =====
+function getYesterday() {
+  const d = new Date(Date.now() - 86400000);
+  return d.toISOString().split('T')[0] + 'T00:00:00';
+}
+
+function detectType(ioc) {
+  if (!ioc) return 'domain';
+  if (/^CVE-/i.test(ioc)) return 'cve';
+  if (/^[a-f0-9]{32,128}$/i.test(ioc)) return 'hash';
+  if (/^\d{1,3}(\.\d{1,3}){3}(:\d+)?$/.test(ioc)) return 'ip';
+  if (/^https?:\/\//i.test(ioc)) return 'url';
+  if (/@/.test(ioc)) return 'email';
+  if (/:\d+$/.test(ioc)) return 'ip';
+  return 'domain';
+}
+
+function mapThreat(threatStr) {
+  const s = (threatStr || '').toLowerCase();
+  if (s.includes('ransomware') || s.includes('rat') || s.includes('c2')) return 'critical';
+  if (s.includes('malware') || s.includes('trojan') || s.includes('exploit')) return 'high';
+  if (s.includes('phish') || s.includes('spam')) return 'medium';
+  return 'low';
+}
+
+function mapThreatLevel(type, confidence) {
+  if (confidence >= 80) return 'critical';
+  if (confidence >= 50 || (type || '').includes('payload')) return 'high';
+  if (confidence >= 25) return 'medium';
+  return 'low';
+}
+
+function mapMalBazaarThreat(sample) {
+  const sig = (sample.signature || '').toLowerCase();
+  if (sig.includes('ransom') || sig.includes('cobalt') || sig.includes('emotet')) return 'critical';
+  if (sig.includes('trojan') || sig.includes('rat') || sig.includes('loader')) return 'high';
+  return 'medium';
+}
+
+function mapOTXType(type) {
+  const t = (type || '').toLowerCase();
+  if (t.includes('ipv4') || t.includes('ipv6')) return 'ip';
+  if (t.includes('domain') || t.includes('hostname')) return 'domain';
+  if (t.includes('url') || t.includes('uri')) return 'url';
+  if (t.includes('hash') || t.includes('md5') || t.includes('sha')) return 'hash';
+  if (t.includes('email')) return 'email';
+  if (t.includes('cve')) return 'cve';
+  return 'domain';
+}
+
+function mapOTXThreat(pulse) {
+  const adv = (pulse.adversary || '').toLowerCase();
+  const tags = (pulse.tags || []).join(' ').toLowerCase();
+  if (adv.includes('apt') || tags.includes('ransomware') || tags.includes('apt')) return 'critical';
+  if (tags.includes('malware') || tags.includes('exploit') || tags.includes('c2')) return 'high';
+  if (tags.includes('phish') || tags.includes('spam')) return 'medium';
+  return 'low';
+}
+
+function formatTime(ts) {
+  try {
+    const d = new Date(ts);
+    if (isNaN(d.getTime())) return 'Recent';
+    const diff = Date.now() - d.getTime();
+    if (diff < 3600000) return Math.floor(diff / 60000) + 'm ago';
+    if (diff < 86400000) return Math.floor(diff / 3600000) + 'h ago';
+    return Math.floor(diff / 86400000) + 'd ago';
+  } catch { return 'Recent'; }
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function logScan(msg) {
+  const el = document.getElementById('scanLog');
+  el.textContent = '› ' + msg;
+}
+
+// ===== CORE SCAN LOGIC =====
+async function startScan() {
+  const btn = document.getElementById('scanBtn');
+  if (btn.disabled) return;
+  btn.disabled = true;
+  btn.classList.add('loading');
+  document.getElementById('statusText').textContent = 'SCANNING...';
+  document.getElementById('progressBar').classList.add('active');
+  document.getElementById('scanLog').classList.add('active');
+
+  allIOCs = [];
+  feedCounts = {};
+  scanStartTime = Date.now();
+
+  const feedKeys = Object.keys(FEEDS);
+  const total = feedKeys.length;
+  let completed = 0;
+
+  for (const key of feedKeys) {
+    const feed = FEEDS[key];
+    logScan(`Querying ${feed.name}...`);
+
+    try {
+      const opts = { method: feed.method };
+      if (feed.method === 'POST') {
+        opts.body = feed.body || '';
+        opts.headers = feed.headers || { 'Content-Type': 'application/json' };
+      }
+
+      const resp = await fetch(feed.url, opts);
+
+      let data;
+      if (feed.isText) {
+        data = await resp.text();
+      } else {
+        data = await resp.json();
+      }
+
+      const iocs = feed.parse(data);
+      feedCounts[key] = iocs.length;
+      allIOCs = allIOCs.concat(iocs);
+      logScan(`${feed.name}: ${iocs.length} IOCs collected`);
+
+    } catch (err) {
+      console.warn(`Feed ${feed.name} failed:`, err.message);
+      feedCounts[key] = 0;
+      logScan(`${feed.name}: ⚠ Feed unavailable`);
+    }
+
+    completed++;
+    document.getElementById('progressFill').style.width = ((completed / total) * 100) + '%';
+
+    // Brief pause between feeds to avoid rate limits
+    await new Promise(r => setTimeout(r, 300));
+  }
+
+  // Deduplicate by value
+  const seen = new Set();
+  allIOCs = allIOCs.filter(ioc => {
+    if (!ioc.value || seen.has(ioc.value)) return false;
+    seen.add(ioc.value);
+    return true;
+  });
+
+  // Sort by threat priority
+  const threatOrder = { critical: 0, high: 1, medium: 2, low: 3, info: 4 };
+  allIOCs.sort((a, b) => (threatOrder[a.threat] ?? 4) - (threatOrder[b.threat] ?? 4));
+
+  finishScan();
+}
+
+function finishScan() {
+  const btn = document.getElementById('scanBtn');
+  btn.disabled = false;
+  btn.classList.remove('loading');
+  document.getElementById('statusText').textContent = 'SCAN COMPLETE';
+  document.getElementById('progressBar').classList.remove('active');
+  document.getElementById('scanLog').classList.remove('active');
+
+  updateStats();
+  updateFeedCounts();
+  applyFilters();
+  generateBriefing();
+  showToast(`✅ Collected ${allIOCs.length} unique IOCs from ${Object.values(feedCounts).filter(v=>v>0).length} feeds`);
+
+  // Auto-reset status after a few seconds
+  setTimeout(() => {
+    document.getElementById('statusText').textContent = 'READY';
+  }, 5000);
+}
+
+function updateStats() {
+  document.getElementById('statTotal').textContent = allIOCs.length;
+  document.getElementById('statCritical').textContent = allIOCs.filter(i => i.threat === 'critical').length;
+  document.getElementById('statHigh').textContent = allIOCs.filter(i => i.threat === 'high').length;
+  document.getElementById('statMedium').textContent = allIOCs.filter(i => i.threat === 'medium').length;
+  document.getElementById('statLow').textContent = allIOCs.filter(i => i.threat === 'low').length;
+  document.getElementById('statFeeds').textContent = Object.values(feedCounts).filter(v => v > 0).length;
+}
+
+function updateFeedCounts() {
+  for (const [key, feed] of Object.entries(FEEDS)) {
+    const el = document.getElementById(feed.feedId);
+    if (el) el.textContent = feedCounts[key] ?? '—';
+  }
+}
+
+// ===== FILTERS & DISPLAY =====
+function setFilter(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentPage = 0;
+  applyFilters();
+}
+
+function applyFilters() {
+  const search = document.getElementById('searchBox').value.toLowerCase();
+  filteredIOCs = allIOCs.filter(ioc => {
+    if (currentFilter !== 'all' && ioc.type !== currentFilter) return false;
+    if (search) {
+      const haystack = `${ioc.value} ${ioc.source} ${(ioc.tags || []).join(' ')}`.toLowerCase();
+      if (!haystack.includes(search)) return false;
+    }
+    return true;
+  });
+  currentPage = 0;
+  renderTable();
+}
+
+function renderTable() {
+  const body = document.getElementById('iocTableBody');
+  const pag = document.getElementById('pagination');
+
+  if (filteredIOCs.length === 0) {
+    body.innerHTML = `<div class="empty-state">
+      <div class="empty-icon">${allIOCs.length === 0 ? '🎯' : '🔍'}</div>
+      <div class="empty-title">${allIOCs.length === 0 ? 'IOC Hunter Ready' : 'No Matches Found'}</div>
+      <div class="empty-desc">${allIOCs.length === 0 ? 'Click "FETCH IOCs" to aggregate indicators from 12+ threat intelligence feeds' : 'Try adjusting your filters or search terms'}</div>
+    </div>`;
+    pag.style.display = 'none';
+    return;
+  }
+
+  const start = currentPage * PAGE_SIZE;
+  const pageItems = filteredIOCs.slice(start, start + PAGE_SIZE);
+  const totalPages = Math.ceil(filteredIOCs.length / PAGE_SIZE);
+
+  body.innerHTML = pageItems.map((ioc, i) => `
+    <div class="ioc-row" style="animation-delay:${i * 20}ms">
+      <div><span class="ioc-type ${ioc.type}">${ioc.type}</span></div>
+      <div class="ioc-value" onclick="copyIOC(this)" title="Click to copy">${escHtml(truncate(ioc.value, 80))}</div>
+      <div class="ioc-source">${escHtml(ioc.source)}</div>
+      <div><span class="ioc-threat threat-${ioc.threat}">${ioc.threat}</span></div>
+      <div class="ioc-tags">${(ioc.tags || []).slice(0, 3).map(t => `<span class="ioc-tag">${escHtml(t)}</span>`).join('')}</div>
+      <div class="ioc-time">${formatTime(ioc.time)}</div>
+    </div>
+  `).join('');
+
+  pag.style.display = 'flex';
+  document.getElementById('pageInfo').textContent = `Page ${currentPage + 1} of ${totalPages} (${filteredIOCs.length} IOCs)`;
+  document.getElementById('prevBtn').disabled = currentPage === 0;
+  document.getElementById('nextBtn').disabled = currentPage >= totalPages - 1;
+}
+
+function changePage(dir) {
+  currentPage += dir;
+  renderTable();
+}
+
+function copyIOC(el) {
+  navigator.clipboard.writeText(el.textContent.trim()).then(() => showToast('📋 IOC copied to clipboard'));
+}
+
+function escHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s || '';
+  return d.innerHTML;
+}
+
+function truncate(s, max) {
+  return (s || '').length > max ? s.substring(0, max) + '…' : (s || '');
+}
+
+// ===== EXECUTIVE BRIEFING =====
+function generateBriefing() {
+  const panel = document.getElementById('briefingPanel');
+  const content = document.getElementById('briefingContent');
+
+  if (allIOCs.length === 0) { panel.classList.remove('visible'); return; }
+
+  const critical = allIOCs.filter(i => i.threat === 'critical');
+  const high = allIOCs.filter(i => i.threat === 'high');
+  const ips = allIOCs.filter(i => i.type === 'ip');
+  const urls = allIOCs.filter(i => i.type === 'url');
+  const hashes = allIOCs.filter(i => i.type === 'hash');
+  const cves = allIOCs.filter(i => i.type === 'cve');
+  const domains = allIOCs.filter(i => i.type === 'domain');
+  const activeFeeds = Object.values(feedCounts).filter(v => v > 0).length;
+  const elapsed = ((Date.now() - scanStartTime) / 1000).toFixed(1);
+
+  const topTags = {};
+  allIOCs.forEach(i => (i.tags || []).forEach(t => {
+    if (t && t.length > 1) topTags[t] = (topTags[t] || 0) + 1;
+  }));
+  const sortedTags = Object.entries(topTags).sort((a, b) => b[1] - a[1]).slice(0, 5);
+
+  let html = `<strong>Scan completed in ${elapsed}s</strong> — aggregated <strong>${allIOCs.length}</strong> unique IOCs from <strong>${activeFeeds}</strong> active feeds.<br><br>`;
+
+  html += `<strong>Breakdown:</strong> ${critical.length} critical, ${high.length} high-priority indicators identified. `;
+  html += `Composition: ${ips.length} IPs, ${urls.length} URLs, ${hashes.length} hashes, ${domains.length} domains, ${cves.length} CVEs.<br><br>`;
+
+  if (critical.length > 0) {
+    html += `<strong>⚠ Priority Action:</strong> ${critical.length} critical IOCs require immediate review — including `;
+    const critSources = [...new Set(critical.map(i => i.source))].slice(0, 3).join(', ');
+    html += `indicators from ${critSources}. `;
+    if (cves.length > 0) {
+      html += `${cves.length} actively exploited CVEs flagged by CISA KEV. `;
+    }
+    html += `<br><br>`;
+  }
+
+  if (sortedTags.length > 0) {
+    html += `<strong>Top threat categories:</strong> ${sortedTags.map(([tag, count]) => `${tag} (${count})`).join(', ')}.`;
+  }
+
+  content.innerHTML = html;
+  panel.classList.add('visible');
+}
+
+// ===== EXPORTS =====
+function exportCSV() {
+  if (filteredIOCs.length === 0) return showToast('⚠ No IOCs to export');
+  const rows = [['Type', 'Indicator', 'Source', 'Threat', 'Tags', 'Time']];
+  filteredIOCs.forEach(i => {
+    rows.push([i.type, `"${(i.value || '').replace(/"/g, '""')}"`, i.source, i.threat, (i.tags || []).join('; '), i.time]);
+  });
+  const csv = rows.map(r => r.join(',')).join('\n');
+  download('ioc-hunter-export.csv', csv, 'text/csv');
+  showToast(`📁 Exported ${filteredIOCs.length} IOCs as CSV`);
+}
+
+function exportJSON() {
+  if (filteredIOCs.length === 0) return showToast('⚠ No IOCs to export');
+  const data = filteredIOCs.map(i => ({ type: i.type, value: i.value, source: i.source, threat: i.threat, tags: i.tags, time: i.time }));
+  download('ioc-hunter-export.json', JSON.stringify(data, null, 2), 'application/json');
+  showToast(`📁 Exported ${filteredIOCs.length} IOCs as JSON`);
+}
+
+function download(filename, content, mime) {
+  const blob = new Blob([content], { type: mime });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// ===== REPORT =====
+function openReport() {
+  if (allIOCs.length === 0) return showToast('⚠ Run a scan first');
+  generateReportContent();
+  document.getElementById('reportModal').classList.add('open');
+}
+
+function closeReport() {
+  document.getElementById('reportModal').classList.remove('open');
+}
+
+function generateReportContent() {
+  const el = document.getElementById('reportContent');
+  const now = new Date().toLocaleString();
+  const critical = allIOCs.filter(i => i.threat === 'critical');
+  const high = allIOCs.filter(i => i.threat === 'high');
+
+  let html = `<h3>Report Generated: ${now}</h3>`;
+  html += `<p>Total IOCs collected: <strong>${allIOCs.length}</strong> from <strong>${Object.values(feedCounts).filter(v=>v>0).length}</strong> feeds.</p>`;
+
+  html += `<h3>Threat Distribution</h3>`;
+  html += `<table><tr><th>Threat Level</th><th>Count</th><th>% of Total</th></tr>`;
+  ['critical', 'high', 'medium', 'low'].forEach(level => {
+    const c = allIOCs.filter(i => i.threat === level).length;
+    html += `<tr><td>${level.toUpperCase()}</td><td>${c}</td><td>${allIOCs.length ? (c / allIOCs.length * 100).toFixed(1) : 0}%</td></tr>`;
+  });
+  html += `</table>`;
+
+  html += `<h3>IOC Type Breakdown</h3>`;
+  html += `<table><tr><th>Type</th><th>Count</th></tr>`;
+  ['ip', 'url', 'hash', 'domain', 'cve', 'email'].forEach(type => {
+    const c = allIOCs.filter(i => i.type === type).length;
+    if (c > 0) html += `<tr><td>${type.toUpperCase()}</td><td>${c}</td></tr>`;
+  });
+  html += `</table>`;
+
+  if (critical.length > 0) {
+    html += `<h3>⚠ Critical IOCs (Top 20)</h3>`;
+    html += `<table><tr><th>Type</th><th>Indicator</th><th>Source</th><th>Tags</th></tr>`;
+    critical.slice(0, 20).forEach(i => {
+      html += `<tr><td>${i.type}</td><td style="word-break:break-all;font-family:monospace;font-size:11px">${escHtml(truncate(i.value, 60))}</td><td>${i.source}</td><td>${(i.tags||[]).join(', ')}</td></tr>`;
+    });
+    html += `</table>`;
+  }
+
+  html += `<h3>Feed Performance</h3>`;
+  html += `<table><tr><th>Feed</th><th>IOCs Collected</th><th>Status</th></tr>`;
+  Object.entries(FEEDS).forEach(([key, feed]) => {
+    const c = feedCounts[key] ?? 0;
+    html += `<tr><td>${feed.name}</td><td>${c}</td><td>${c > 0 ? '✅ Active' : '⚠ Unavailable'}</td></tr>`;
+  });
+  html += `</table>`;
+
+  el.innerHTML = html;
+}
+
+function copyReport() {
+  const html = document.getElementById('reportContent').innerHTML;
+  navigator.clipboard.writeText(html).then(() => showToast('📋 Report HTML copied'));
+}
+
+function downloadReport() {
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>IOC Hunter Report</title><style>body{font-family:Arial,sans-serif;padding:40px;max-width:900px;margin:0 auto;background:#0a0e17;color:#e2e8f0}table{width:100%;border-collapse:collapse;margin:16px 0}th,td{padding:8px 12px;border:1px solid #1e2d4a;text-align:left;font-size:13px}th{background:#151d2e;font-weight:600}h3{color:#3b82f6;margin:24px 0 8px}</style></head><body><h1>🎯 IOC Hunter — Threat Intelligence Report</h1>${document.getElementById('reportContent').innerHTML}</body></html>`;
+  download('ioc-hunter-report.html', html, 'text/html');
+  showToast('📁 Report downloaded');
+}
+
+// ===== OUTLOOK =====
+function openOutlook() {
+  if (allIOCs.length === 0) return showToast('⚠ Run a scan first');
+  const now = new Date().toLocaleString();
+  const critical = allIOCs.filter(i => i.threat === 'critical').length;
+  const high = allIOCs.filter(i => i.threat === 'high').length;
+  const subject = encodeURIComponent(`[IOC HUNTER] Threat Intel Report — ${allIOCs.length} IOCs | ${critical} Critical — ${now}`);
+  let body = `IOC HUNTER — 24h Threat Intelligence Report%0D%0A`;
+  body += `Generated: ${encodeURIComponent(now)}%0D%0A%0D%0A`;
+  body += `SUMMARY%0D%0A`;
+  body += `Total IOCs: ${allIOCs.length}%0D%0A`;
+  body += `Critical: ${critical} | High: ${high}%0D%0A`;
+  body += `Active Feeds: ${Object.values(feedCounts).filter(v=>v>0).length}%0D%0A%0D%0A`;
+
+  if (critical > 0) {
+    body += `CRITICAL IOCs (Top 10):%0D%0A`;
+    allIOCs.filter(i => i.threat === 'critical').slice(0, 10).forEach(i => {
+      body += `[${i.type.toUpperCase()}] ${encodeURIComponent(i.value)} — ${i.source}%0D%0A`;
+    });
+  }
+
+  body += `%0D%0AAction Required: Review critical IOCs and update blocklists/detection rules.`;
+
+  window.open(`mailto:?subject=${subject}&body=${body}`);
+  showToast('📧 Opening mail client...');
+}
+
+// ===== AUTO-LOAD PRE-SCANNED DATA =====
+async function loadPreScanned() {
+  try {
+    const resp = await fetch('ioc_data.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('No pre-scanned data');
+    const data = await resp.json();
+    
+    if (!data.iocs || data.iocs.length === 0) throw new Error('Empty data');
+    
+    allIOCs = data.iocs;
+    scanStartTime = new Date(data.scan_time).getTime();
+    
+    // Rebuild feed counts from feed_stats
+    if (data.feed_stats) {
+      const feedMap = {
+        'AlienVault OTX': 'feedOTX',
+        'Abuse.ch URLhaus': 'feedURLhaus',
+        'Abuse.ch ThreatFox': 'feedThreatFox',
+        'Abuse.ch MalBazaar': 'feedMalBazaar',
+        'Abuse.ch FeodoTracker': 'feedFeodo',
+        'Blocklist.de': 'feedBlocklist',
+        'CINSscore': 'feedCINS',
+        'OpenPhish': 'feedOpenPhish',
+        'PhishTank': 'feedPhishTank',
+        'C2 IntelFeeds': 'feedC2Intel',
+        'DigitalSide TI': 'feedDigitalSide',
+        'CISA KEV': 'feedCISA'
+      };
+      for (const [name, count] of Object.entries(data.feed_stats)) {
+        const feedId = feedMap[name];
+        if (feedId) {
+          feedCounts[name] = count;
+          const el = document.getElementById(feedId);
+          if (el) el.textContent = count;
+        }
+      }
+    }
+    
+    updateStats();
+    applyFilters();
+    generateBriefing();
+    
+    // Show scan time
+    const scanDate = new Date(data.scan_time);
+    const ago = formatTime(data.scan_time);
+    document.getElementById('statusText').textContent = `LAST SCAN: ${ago}`;
+    showToast(`📦 Loaded ${allIOCs.length} IOCs from last scan (${ago})`);
+    
+  } catch (e) {
+    console.log('No pre-scanned data available, manual scan required:', e.message);
+    renderTable();
+  }
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  loadPreScanned();
+});
+</script>
+</body>
+</html>
