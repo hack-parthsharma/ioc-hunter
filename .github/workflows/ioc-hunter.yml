@@ -1,0 +1,96 @@
+name: IOC Hunter — Daily Fetch
+
+on:
+  schedule:
+    # 9:30 AM IST = 04:00 UTC (30 min after VULN INTEL)
+    - cron: '0 4 * * *'
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-iocs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: 🎯 Run IOC Fetcher
+        run: python ioc_fetcher.py
+      
+      - name: 📧 Send email report
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          REPORT_RECIPIENTS: ${{ secrets.REPORT_RECIPIENTS }}
+        run: |
+          python - <<'EMAILSCRIPT'
+          import smtplib
+          import os
+          import json
+          from email.mime.multipart import MIMEMultipart
+          from email.mime.text import MIMEText
+          from datetime import datetime, timezone
+
+          gmail_user = os.environ.get("GMAIL_USER", "")
+          gmail_pass = os.environ.get("GMAIL_APP_PASSWORD", "")
+          recipients = os.environ.get("REPORT_RECIPIENTS", "")
+
+          if not all([gmail_user, gmail_pass, recipients]):
+              print("⚠ Email credentials not configured — skipping email")
+              exit(0)
+
+          # Load stats for subject line
+          with open("ioc_data.json", "r") as f:
+              data = json.load(f)
+          stats = data["stats"]
+          now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+          subject = f"[IOC HUNTER] {stats['total']} IOCs | {stats['critical']} Critical | {stats['active_feeds']} Feeds — {now}"
+
+          # Load HTML report
+          with open("ioc_report.html", "r") as f:
+              html_body = f.read()
+
+          msg = MIMEMultipart("alternative")
+          msg["Subject"] = subject
+          msg["From"] = gmail_user
+          msg["To"] = recipients
+
+          # Plain text fallback
+          plain = f"""IOC HUNTER — Daily Threat Intelligence Report
+          
+          Scan Time: {now}
+          Total IOCs: {stats['total']}
+          Critical: {stats['critical']} | High: {stats['high']} | Medium: {stats['medium']} | Low: {stats['low']}
+          Active Feeds: {stats['active_feeds']}/{stats['total_feeds']}
+          
+          View full report: https://{os.environ.get('GITHUB_REPOSITORY_OWNER', 'YOUR_USERNAME')}.github.io/ioc-hunter/
+          """
+
+          msg.attach(MIMEText(plain, "plain"))
+          msg.attach(MIMEText(html_body, "html"))
+
+          try:
+              with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+                  server.login(gmail_user, gmail_pass)
+                  server.sendmail(gmail_user, recipients.split(","), msg.as_string())
+              print(f"✅ Email sent to {recipients}")
+          except Exception as e:
+              print(f"❌ Email failed: {e}")
+          EMAILSCRIPT
+      
+      - name: 📝 Commit results
+        run: |
+          git config user.name "IOC Hunter Bot"
+          git config user.email "ioc-hunter[bot]@users.noreply.github.com"
+          git add ioc_data.json ioc_report.html
+          git diff --cached --quiet || git commit -m "🎯 IOC scan: $(date -u '+%Y-%m-%d %H:%M UTC') — $(python -c 'import json; d=json.load(open("ioc_data.json")); print(f"{d[\"stats\"][\"total\"]} IOCs, {d[\"stats\"][\"critical\"]} critical")')"
+          git push
