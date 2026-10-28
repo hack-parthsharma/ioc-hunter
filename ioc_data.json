@@ -1,17 +1,17 @@
 {
-  "scan_time": "2026-10-27T09:26:47.526124+00:00",
+  "scan_time": "2026-10-28T10:09:03.242616+00:00",
   "stats": {
-    "total": 607,
-    "critical": 111,
-    "high": 396,
+    "total": 507,
+    "critical": 107,
+    "high": 300,
     "medium": 100,
     "low": 0,
-    "active_feeds": 8,
+    "active_feeds": 7,
     "total_feeds": 12,
     "type_counts": {
       "ip": 401,
-      "cve": 10,
-      "url": 196
+      "cve": 6,
+      "url": 100
     }
   },
   "feed_stats": {
@@ -23,10 +23,10 @@
     "Blocklist.de": 100,
     "CINSscore": 100,
     "OpenPhish": 100,
-    "PhishTank": 100,
+    "PhishTank": 0,
     "C2 IntelFeeds": 100,
     "DigitalSide TI": 100,
-    "CISA KEV": 10
+    "CISA KEV": 6
   },
   "iocs": [
     {
@@ -50,7 +50,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340112+00:00"
+      "time": "2026-10-28T10:09:02.921917+00:00"
     },
     {
       "type": "ip",
@@ -61,7 +61,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340131+00:00"
+      "time": "2026-10-28T10:09:02.921934+00:00"
     },
     {
       "type": "ip",
@@ -72,7 +72,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340135+00:00"
+      "time": "2026-10-28T10:09:02.921938+00:00"
     },
     {
       "type": "ip",
@@ -83,7 +83,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340137+00:00"
+      "time": "2026-10-28T10:09:02.921941+00:00"
     },
     {
       "type": "ip",
@@ -94,18 +94,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340140+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.87.53.0",
-      "source": "C2 Intel",
-      "threat": "critical",
-      "tags": [
-        "c2",
-        "Possible Cobaltstrike C2 IP"
-      ],
-      "time": "2026-10-27T09:26:47.340142+00:00"
+      "time": "2026-10-28T10:09:02.921943+00:00"
     },
     {
       "type": "ip",
@@ -116,7 +105,18 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340144+00:00"
+      "time": "2026-10-28T10:09:02.921946+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "101.133.229.117",
+      "source": "C2 Intel",
+      "threat": "critical",
+      "tags": [
+        "c2",
+        "Possible Cobaltstrike C2 IP"
+      ],
+      "time": "2026-10-28T10:09:02.921949+00:00"
     },
     {
       "type": "ip",
@@ -127,7 +127,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340146+00:00"
+      "time": "2026-10-28T10:09:02.921951+00:00"
     },
     {
       "type": "ip",
@@ -138,7 +138,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340148+00:00"
+      "time": "2026-10-28T10:09:02.921954+00:00"
     },
     {
       "type": "ip",
@@ -149,7 +149,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340151+00:00"
+      "time": "2026-10-28T10:09:02.921957+00:00"
     },
     {
       "type": "ip",
@@ -160,7 +160,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340153+00:00"
+      "time": "2026-10-28T10:09:02.921959+00:00"
     },
     {
       "type": "ip",
@@ -171,7 +171,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340155+00:00"
+      "time": "2026-10-28T10:09:02.921962+00:00"
     },
     {
       "type": "ip",
@@ -182,7 +182,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340157+00:00"
+      "time": "2026-10-28T10:09:02.921965+00:00"
     },
     {
       "type": "ip",
@@ -193,7 +193,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340159+00:00"
+      "time": "2026-10-28T10:09:02.921967+00:00"
     },
     {
       "type": "ip",
@@ -204,7 +204,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340161+00:00"
+      "time": "2026-10-28T10:09:02.921969+00:00"
     },
     {
       "type": "ip",
@@ -215,7 +215,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340163+00:00"
+      "time": "2026-10-28T10:09:02.921972+00:00"
     },
     {
       "type": "ip",
@@ -226,7 +226,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340166+00:00"
+      "time": "2026-10-28T10:09:02.921974+00:00"
     },
     {
       "type": "ip",
@@ -237,7 +237,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340168+00:00"
+      "time": "2026-10-28T10:09:02.921977+00:00"
     },
     {
       "type": "ip",
@@ -248,7 +248,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340170+00:00"
+      "time": "2026-10-28T10:09:02.921979+00:00"
     },
     {
       "type": "ip",
@@ -259,7 +259,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340172+00:00"
+      "time": "2026-10-28T10:09:02.921981+00:00"
     },
     {
       "type": "ip",
@@ -270,7 +270,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340175+00:00"
+      "time": "2026-10-28T10:09:02.921984+00:00"
     },
     {
       "type": "ip",
@@ -281,7 +281,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340178+00:00"
+      "time": "2026-10-28T10:09:02.921993+00:00"
     },
     {
       "type": "ip",
@@ -292,7 +292,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340185+00:00"
+      "time": "2026-10-28T10:09:02.921996+00:00"
     },
     {
       "type": "ip",
@@ -303,18 +303,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340188+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "109.236.50.145",
-      "source": "C2 Intel",
-      "threat": "critical",
-      "tags": [
-        "c2",
-        "Possible Cobaltstrike C2 IP"
-      ],
-      "time": "2026-10-27T09:26:47.340192+00:00"
+      "time": "2026-10-28T10:09:02.921998+00:00"
     },
     {
       "type": "ip",
@@ -325,7 +314,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340196+00:00"
+      "time": "2026-10-28T10:09:02.922001+00:00"
     },
     {
       "type": "ip",
@@ -336,7 +325,18 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340200+00:00"
+      "time": "2026-10-28T10:09:02.922003+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "111.229.225.75",
+      "source": "C2 Intel",
+      "threat": "critical",
+      "tags": [
+        "c2",
+        "Possible Cobaltstrike C2 IP"
+      ],
+      "time": "2026-10-28T10:09:02.922006+00:00"
     },
     {
       "type": "ip",
@@ -347,7 +347,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340204+00:00"
+      "time": "2026-10-28T10:09:02.922008+00:00"
     },
     {
       "type": "ip",
@@ -358,7 +358,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340208+00:00"
+      "time": "2026-10-28T10:09:02.922011+00:00"
     },
     {
       "type": "ip",
@@ -369,7 +369,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340211+00:00"
+      "time": "2026-10-28T10:09:02.922013+00:00"
     },
     {
       "type": "ip",
@@ -380,7 +380,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340213+00:00"
+      "time": "2026-10-28T10:09:02.922016+00:00"
     },
     {
       "type": "ip",
@@ -391,7 +391,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340216+00:00"
+      "time": "2026-10-28T10:09:02.922018+00:00"
     },
     {
       "type": "ip",
@@ -402,7 +402,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340218+00:00"
+      "time": "2026-10-28T10:09:02.922020+00:00"
     },
     {
       "type": "ip",
@@ -413,7 +413,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340220+00:00"
+      "time": "2026-10-28T10:09:02.922024+00:00"
     },
     {
       "type": "ip",
@@ -424,7 +424,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340223+00:00"
+      "time": "2026-10-28T10:09:02.922026+00:00"
     },
     {
       "type": "ip",
@@ -435,7 +435,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340225+00:00"
+      "time": "2026-10-28T10:09:02.922035+00:00"
     },
     {
       "type": "ip",
@@ -446,7 +446,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340227+00:00"
+      "time": "2026-10-28T10:09:02.922038+00:00"
     },
     {
       "type": "ip",
@@ -457,7 +457,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340229+00:00"
+      "time": "2026-10-28T10:09:02.922040+00:00"
     },
     {
       "type": "ip",
@@ -468,7 +468,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340232+00:00"
+      "time": "2026-10-28T10:09:02.922043+00:00"
     },
     {
       "type": "ip",
@@ -479,7 +479,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340234+00:00"
+      "time": "2026-10-28T10:09:02.922045+00:00"
     },
     {
       "type": "ip",
@@ -490,7 +490,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340236+00:00"
+      "time": "2026-10-28T10:09:02.922048+00:00"
     },
     {
       "type": "ip",
@@ -501,7 +501,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340238+00:00"
+      "time": "2026-10-28T10:09:02.922051+00:00"
     },
     {
       "type": "ip",
@@ -512,7 +512,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340241+00:00"
+      "time": "2026-10-28T10:09:02.922053+00:00"
     },
     {
       "type": "ip",
@@ -523,7 +523,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340243+00:00"
+      "time": "2026-10-28T10:09:02.922056+00:00"
     },
     {
       "type": "ip",
@@ -534,7 +534,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340245+00:00"
+      "time": "2026-10-28T10:09:02.922058+00:00"
     },
     {
       "type": "ip",
@@ -545,7 +545,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340247+00:00"
+      "time": "2026-10-28T10:09:02.922061+00:00"
     },
     {
       "type": "ip",
@@ -556,7 +556,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340250+00:00"
+      "time": "2026-10-28T10:09:02.922063+00:00"
     },
     {
       "type": "ip",
@@ -567,7 +567,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340252+00:00"
+      "time": "2026-10-28T10:09:02.922066+00:00"
     },
     {
       "type": "ip",
@@ -578,7 +578,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340254+00:00"
+      "time": "2026-10-28T10:09:02.922069+00:00"
     },
     {
       "type": "ip",
@@ -589,7 +589,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340256+00:00"
+      "time": "2026-10-28T10:09:02.922072+00:00"
     },
     {
       "type": "ip",
@@ -600,7 +600,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340258+00:00"
+      "time": "2026-10-28T10:09:02.922076+00:00"
     },
     {
       "type": "ip",
@@ -611,7 +611,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340260+00:00"
+      "time": "2026-10-28T10:09:02.922079+00:00"
     },
     {
       "type": "ip",
@@ -622,7 +622,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340263+00:00"
+      "time": "2026-10-28T10:09:02.922082+00:00"
     },
     {
       "type": "ip",
@@ -633,7 +633,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340265+00:00"
+      "time": "2026-10-28T10:09:02.922084+00:00"
     },
     {
       "type": "ip",
@@ -644,7 +644,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340267+00:00"
+      "time": "2026-10-28T10:09:02.922087+00:00"
     },
     {
       "type": "ip",
@@ -655,7 +655,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340269+00:00"
+      "time": "2026-10-28T10:09:02.922090+00:00"
     },
     {
       "type": "ip",
@@ -666,7 +666,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340272+00:00"
+      "time": "2026-10-28T10:09:02.922092+00:00"
     },
     {
       "type": "ip",
@@ -677,7 +677,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340274+00:00"
+      "time": "2026-10-28T10:09:02.922095+00:00"
     },
     {
       "type": "ip",
@@ -688,7 +688,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340276+00:00"
+      "time": "2026-10-28T10:09:02.922097+00:00"
     },
     {
       "type": "ip",
@@ -699,7 +699,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340279+00:00"
+      "time": "2026-10-28T10:09:02.922099+00:00"
     },
     {
       "type": "ip",
@@ -710,7 +710,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340281+00:00"
+      "time": "2026-10-28T10:09:02.922102+00:00"
     },
     {
       "type": "ip",
@@ -721,7 +721,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340283+00:00"
+      "time": "2026-10-28T10:09:02.922104+00:00"
     },
     {
       "type": "ip",
@@ -732,7 +732,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340285+00:00"
+      "time": "2026-10-28T10:09:02.922107+00:00"
     },
     {
       "type": "ip",
@@ -743,7 +743,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340287+00:00"
+      "time": "2026-10-28T10:09:02.922109+00:00"
     },
     {
       "type": "ip",
@@ -754,7 +754,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340290+00:00"
+      "time": "2026-10-28T10:09:02.922111+00:00"
     },
     {
       "type": "ip",
@@ -765,7 +765,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340292+00:00"
+      "time": "2026-10-28T10:09:02.922115+00:00"
     },
     {
       "type": "ip",
@@ -776,7 +776,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340294+00:00"
+      "time": "2026-10-28T10:09:02.922117+00:00"
     },
     {
       "type": "ip",
@@ -787,7 +787,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340296+00:00"
+      "time": "2026-10-28T10:09:02.922120+00:00"
     },
     {
       "type": "ip",
@@ -798,7 +798,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340298+00:00"
+      "time": "2026-10-28T10:09:02.922122+00:00"
     },
     {
       "type": "ip",
@@ -809,7 +809,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340300+00:00"
+      "time": "2026-10-28T10:09:02.922124+00:00"
     },
     {
       "type": "ip",
@@ -820,7 +820,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340302+00:00"
+      "time": "2026-10-28T10:09:02.922127+00:00"
     },
     {
       "type": "ip",
@@ -831,7 +831,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340305+00:00"
+      "time": "2026-10-28T10:09:02.922129+00:00"
     },
     {
       "type": "ip",
@@ -842,7 +842,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340307+00:00"
+      "time": "2026-10-28T10:09:02.922132+00:00"
     },
     {
       "type": "ip",
@@ -853,29 +853,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340309+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "141.255.162.234",
-      "source": "C2 Intel",
-      "threat": "critical",
-      "tags": [
-        "c2",
-        "Possible Cobaltstrike C2 IP"
-      ],
-      "time": "2026-10-27T09:26:47.340311+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "141.255.162.236",
-      "source": "C2 Intel",
-      "threat": "critical",
-      "tags": [
-        "c2",
-        "Possible Cobaltstrike C2 IP"
-      ],
-      "time": "2026-10-27T09:26:47.340313+00:00"
+      "time": "2026-10-28T10:09:02.922134+00:00"
     },
     {
       "type": "ip",
@@ -886,7 +864,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340315+00:00"
+      "time": "2026-10-28T10:09:02.922136+00:00"
     },
     {
       "type": "ip",
@@ -897,7 +875,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340317+00:00"
+      "time": "2026-10-28T10:09:02.922139+00:00"
     },
     {
       "type": "ip",
@@ -908,7 +886,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340319+00:00"
+      "time": "2026-10-28T10:09:02.922141+00:00"
     },
     {
       "type": "ip",
@@ -919,7 +897,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340321+00:00"
+      "time": "2026-10-28T10:09:02.922144+00:00"
     },
     {
       "type": "ip",
@@ -930,7 +908,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340324+00:00"
+      "time": "2026-10-28T10:09:02.922146+00:00"
     },
     {
       "type": "ip",
@@ -941,7 +919,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340326+00:00"
+      "time": "2026-10-28T10:09:02.922148+00:00"
     },
     {
       "type": "ip",
@@ -952,7 +930,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340328+00:00"
+      "time": "2026-10-28T10:09:02.922151+00:00"
     },
     {
       "type": "ip",
@@ -963,7 +941,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340330+00:00"
+      "time": "2026-10-28T10:09:02.922153+00:00"
     },
     {
       "type": "ip",
@@ -974,7 +952,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340332+00:00"
+      "time": "2026-10-28T10:09:02.922155+00:00"
     },
     {
       "type": "ip",
@@ -985,7 +963,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340334+00:00"
+      "time": "2026-10-28T10:09:02.922158+00:00"
     },
     {
       "type": "ip",
@@ -996,7 +974,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340336+00:00"
+      "time": "2026-10-28T10:09:02.922160+00:00"
     },
     {
       "type": "ip",
@@ -1007,7 +985,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340338+00:00"
+      "time": "2026-10-28T10:09:02.922163+00:00"
     },
     {
       "type": "ip",
@@ -1018,7 +996,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340340+00:00"
+      "time": "2026-10-28T10:09:02.922165+00:00"
     },
     {
       "type": "ip",
@@ -1029,7 +1007,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340342+00:00"
+      "time": "2026-10-28T10:09:02.922168+00:00"
     },
     {
       "type": "ip",
@@ -1040,7 +1018,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340344+00:00"
+      "time": "2026-10-28T10:09:02.922170+00:00"
     },
     {
       "type": "ip",
@@ -1051,7 +1029,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340346+00:00"
+      "time": "2026-10-28T10:09:02.922172+00:00"
     },
     {
       "type": "ip",
@@ -1062,7 +1040,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340348+00:00"
+      "time": "2026-10-28T10:09:02.922175+00:00"
     },
     {
       "type": "ip",
@@ -1073,7 +1051,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340351+00:00"
+      "time": "2026-10-28T10:09:02.922177+00:00"
     },
     {
       "type": "ip",
@@ -1084,7 +1062,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340353+00:00"
+      "time": "2026-10-28T10:09:02.922179+00:00"
     },
     {
       "type": "ip",
@@ -1095,7 +1073,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340355+00:00"
+      "time": "2026-10-28T10:09:02.922182+00:00"
     },
     {
       "type": "ip",
@@ -1106,7 +1084,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340357+00:00"
+      "time": "2026-10-28T10:09:02.922184+00:00"
     },
     {
       "type": "ip",
@@ -1117,7 +1095,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340359+00:00"
+      "time": "2026-10-28T10:09:02.922187+00:00"
     },
     {
       "type": "ip",
@@ -1128,7 +1106,7 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340361+00:00"
+      "time": "2026-10-28T10:09:02.922189+00:00"
     },
     {
       "type": "ip",
@@ -1139,7 +1117,53 @@
         "c2",
         "Possible Cobaltstrike C2 IP"
       ],
-      "time": "2026-10-27T09:26:47.340363+00:00"
+      "time": "2026-10-28T10:09:02.922192+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "156.254.20.48",
+      "source": "C2 Intel",
+      "threat": "critical",
+      "tags": [
+        "c2",
+        "Possible Cobaltstrike C2 IP"
+      ],
+      "time": "2026-10-28T10:09:02.922194+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "158.94.210.215",
+      "source": "C2 Intel",
+      "threat": "critical",
+      "tags": [
+        "c2",
+        "Possible Cobaltstrike C2 IP"
+      ],
+      "time": "2026-10-28T10:09:02.922196+00:00"
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-48356",
+      "source": "CISA KEV",
+      "threat": "critical",
+      "tags": [
+        "Adobe",
+        "Commerce and Magento",
+        "actively-exploited"
+      ],
+      "time": "2026-10-27"
+    },
+    {
+      "type": "cve",
+      "value": "CVE-2026-111497",
+      "source": "CISA KEV",
+      "threat": "critical",
+      "tags": [
+        "Google",
+        "Brotli",
+        "actively-exploited"
+      ],
+      "time": "2026-10-27"
     },
     {
       "type": "cve",
@@ -1190,78 +1214,6 @@
       "time": "2026-10-23"
     },
     {
-      "type": "cve",
-      "value": "CVE-2026-106931",
-      "source": "CISA KEV",
-      "threat": "critical",
-      "tags": [
-        "EG Secure Solutions",
-        "SiteGuard Server Edition",
-        "actively-exploited"
-      ],
-      "time": "2026-10-20"
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-96656",
-      "source": "CISA KEV",
-      "threat": "critical",
-      "tags": [
-        "Plex",
-        "Media Server",
-        "actively-exploited"
-      ],
-      "time": "2026-10-20"
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-96655",
-      "source": "CISA KEV",
-      "threat": "critical",
-      "tags": [
-        "Plex",
-        "Media Server",
-        "actively-exploited"
-      ],
-      "time": "2026-10-20"
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-96654",
-      "source": "CISA KEV",
-      "threat": "critical",
-      "tags": [
-        "Plex",
-        "Media Server",
-        "actively-exploited"
-      ],
-      "time": "2026-10-20"
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-96652",
-      "source": "CISA KEV",
-      "threat": "critical",
-      "tags": [
-        "Plex",
-        "Media Server",
-        "actively-exploited"
-      ],
-      "time": "2026-10-20"
-    },
-    {
-      "type": "cve",
-      "value": "CVE-2026-110936",
-      "source": "CISA KEV",
-      "threat": "critical",
-      "tags": [
-        "Siemens",
-        "Software Center",
-        "actively-exploited"
-      ],
-      "time": "2026-10-20"
-    },
-    {
       "type": "ip",
       "value": "1.10.242.248",
       "source": "Blocklist.de",
@@ -1270,18 +1222,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743115+00:00"
+      "time": "2026-10-28T10:09:01.931862+00:00"
     },
     {
       "type": "ip",
-      "value": "1.12.55.80",
+      "value": "1.117.72.220",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743138+00:00"
+      "time": "2026-10-28T10:09:01.931879+00:00"
     },
     {
       "type": "ip",
@@ -1292,7 +1244,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743143+00:00"
+      "time": "2026-10-28T10:09:01.931883+00:00"
     },
     {
       "type": "ip",
@@ -1303,7 +1255,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743145+00:00"
+      "time": "2026-10-28T10:09:01.931885+00:00"
     },
     {
       "type": "ip",
@@ -1314,7 +1266,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743147+00:00"
+      "time": "2026-10-28T10:09:01.931887+00:00"
     },
     {
       "type": "ip",
@@ -1325,7 +1277,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743149+00:00"
+      "time": "2026-10-28T10:09:01.931889+00:00"
     },
     {
       "type": "ip",
@@ -1336,7 +1288,29 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743151+00:00"
+      "time": "2026-10-28T10:09:01.931891+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.140.72.67",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.931892+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.144.106.82",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.931895+00:00"
     },
     {
       "type": "ip",
@@ -1347,18 +1321,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743153+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "1.15.106.134",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743155+00:00"
+      "time": "2026-10-28T10:09:01.931896+00:00"
     },
     {
       "type": "ip",
@@ -1369,18 +1332,29 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743157+00:00"
+      "time": "2026-10-28T10:09:01.931899+00:00"
     },
     {
       "type": "ip",
-      "value": "1.162.216.37",
+      "value": "1.162.208.86",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743159+00:00"
+      "time": "2026-10-28T10:09:01.931901+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.179.238.84",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.931902+00:00"
     },
     {
       "type": "ip",
@@ -1391,18 +1365,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743160+00:00"
+      "time": "2026-10-28T10:09:01.931904+00:00"
     },
     {
       "type": "ip",
-      "value": "1.187.214.31",
+      "value": "1.187.213.56",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743162+00:00"
+      "time": "2026-10-28T10:09:01.931906+00:00"
     },
     {
       "type": "ip",
@@ -1413,7 +1387,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743163+00:00"
+      "time": "2026-10-28T10:09:01.931911+00:00"
     },
     {
       "type": "ip",
@@ -1424,18 +1398,29 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743165+00:00"
+      "time": "2026-10-28T10:09:01.931912+00:00"
     },
     {
       "type": "ip",
-      "value": "1.20.172.162",
+      "value": "1.2.252.192",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743169+00:00"
+      "time": "2026-10-28T10:09:01.931914+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.20.243.85",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.931916+00:00"
     },
     {
       "type": "ip",
@@ -1446,7 +1431,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743171+00:00"
+      "time": "2026-10-28T10:09:01.931920+00:00"
     },
     {
       "type": "ip",
@@ -1457,7 +1442,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743173+00:00"
+      "time": "2026-10-28T10:09:01.931922+00:00"
     },
     {
       "type": "ip",
@@ -1468,7 +1453,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743175+00:00"
+      "time": "2026-10-28T10:09:01.931924+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.219.121.34",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.931926+00:00"
     },
     {
       "type": "ip",
@@ -1479,7 +1475,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743176+00:00"
+      "time": "2026-10-28T10:09:01.931928+00:00"
     },
     {
       "type": "ip",
@@ -1490,7 +1486,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743178+00:00"
+      "time": "2026-10-28T10:09:01.931932+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.234.20.61",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.931934+00:00"
     },
     {
       "type": "ip",
@@ -1501,7 +1508,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743179+00:00"
+      "time": "2026-10-28T10:09:01.931936+00:00"
     },
     {
       "type": "ip",
@@ -1512,7 +1519,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743181+00:00"
+      "time": "2026-10-28T10:09:01.931938+00:00"
     },
     {
       "type": "ip",
@@ -1523,7 +1530,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743183+00:00"
+      "time": "2026-10-28T10:09:01.931940+00:00"
     },
     {
       "type": "ip",
@@ -1534,7 +1541,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743184+00:00"
+      "time": "2026-10-28T10:09:01.931942+00:00"
     },
     {
       "type": "ip",
@@ -1545,7 +1552,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743186+00:00"
+      "time": "2026-10-28T10:09:01.931943+00:00"
     },
     {
       "type": "ip",
@@ -1556,7 +1563,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743188+00:00"
+      "time": "2026-10-28T10:09:01.931945+00:00"
     },
     {
       "type": "ip",
@@ -1567,7 +1574,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743189+00:00"
+      "time": "2026-10-28T10:09:01.931947+00:00"
     },
     {
       "type": "ip",
@@ -1578,7 +1585,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743191+00:00"
+      "time": "2026-10-28T10:09:01.931949+00:00"
     },
     {
       "type": "ip",
@@ -1589,7 +1596,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743193+00:00"
+      "time": "2026-10-28T10:09:01.931951+00:00"
     },
     {
       "type": "ip",
@@ -1600,7 +1607,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743194+00:00"
+      "time": "2026-10-28T10:09:01.931958+00:00"
     },
     {
       "type": "ip",
@@ -1611,7 +1618,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743196+00:00"
+      "time": "2026-10-28T10:09:01.931960+00:00"
     },
     {
       "type": "ip",
@@ -1622,18 +1629,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743197+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "1.94.205.91",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743199+00:00"
+      "time": "2026-10-28T10:09:01.931961+00:00"
     },
     {
       "type": "ip",
@@ -1644,7 +1640,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743200+00:00"
+      "time": "2026-10-28T10:09:01.931963+00:00"
     },
     {
       "type": "ip",
@@ -1655,18 +1651,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743205+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.1.127.141",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743208+00:00"
+      "time": "2026-10-28T10:09:01.931965+00:00"
     },
     {
       "type": "ip",
@@ -1677,18 +1662,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743209+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.10.80.110",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743210+00:00"
+      "time": "2026-10-28T10:09:01.931967+00:00"
     },
     {
       "type": "ip",
@@ -1699,7 +1673,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743212+00:00"
+      "time": "2026-10-28T10:09:01.931969+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "100.11.26.6",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.931971+00:00"
     },
     {
       "type": "ip",
@@ -1710,117 +1695,62 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743213+00:00"
+      "time": "2026-10-28T10:09:01.931973+00:00"
     },
     {
       "type": "ip",
-      "value": "100.14.17.25",
+      "value": "100.15.57.92",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743214+00:00"
+      "time": "2026-10-28T10:09:01.931974+00:00"
     },
     {
       "type": "ip",
-      "value": "100.17.135.45",
+      "value": "100.2.189.193",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743216+00:00"
+      "time": "2026-10-28T10:09:01.931976+00:00"
     },
     {
       "type": "ip",
-      "value": "100.2.100.194",
+      "value": "100.33.138.239",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743217+00:00"
+      "time": "2026-10-28T10:09:01.931978+00:00"
     },
     {
       "type": "ip",
-      "value": "100.24.17.198",
+      "value": "100.38.0.90",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743219+00:00"
+      "time": "2026-10-28T10:09:01.931980+00:00"
     },
     {
       "type": "ip",
-      "value": "100.25.201.206",
+      "value": "100.4.253.92",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743220+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.27.243.142",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743222+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.34.163.217",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743223+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.36.252.198",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743225+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.37.148.142",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743226+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.37.37.163",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743228+00:00"
+      "time": "2026-10-28T10:09:01.931982+00:00"
     },
     {
       "type": "ip",
@@ -1831,7 +1761,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743229+00:00"
+      "time": "2026-10-28T10:09:01.931986+00:00"
     },
     {
       "type": "ip",
@@ -1842,7 +1772,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743231+00:00"
+      "time": "2026-10-28T10:09:01.931988+00:00"
     },
     {
       "type": "ip",
@@ -1853,7 +1783,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743234+00:00"
+      "time": "2026-10-28T10:09:01.931990+00:00"
     },
     {
       "type": "ip",
@@ -1864,7 +1794,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743238+00:00"
+      "time": "2026-10-28T10:09:01.931991+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "100.42.106.186",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.931994+00:00"
     },
     {
       "type": "ip",
@@ -1875,7 +1816,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743240+00:00"
+      "time": "2026-10-28T10:09:01.931997+00:00"
     },
     {
       "type": "ip",
@@ -1886,7 +1827,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743241+00:00"
+      "time": "2026-10-28T10:09:01.931999+00:00"
     },
     {
       "type": "ip",
@@ -1897,7 +1838,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743243+00:00"
+      "time": "2026-10-28T10:09:01.932001+00:00"
     },
     {
       "type": "ip",
@@ -1908,7 +1849,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743244+00:00"
+      "time": "2026-10-28T10:09:01.932003+00:00"
     },
     {
       "type": "ip",
@@ -1919,7 +1860,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743248+00:00"
+      "time": "2026-10-28T10:09:01.932005+00:00"
     },
     {
       "type": "ip",
@@ -1930,7 +1871,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743250+00:00"
+      "time": "2026-10-28T10:09:01.932007+00:00"
     },
     {
       "type": "ip",
@@ -1941,7 +1882,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743251+00:00"
+      "time": "2026-10-28T10:09:01.932008+00:00"
     },
     {
       "type": "ip",
@@ -1952,29 +1893,40 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743253+00:00"
+      "time": "2026-10-28T10:09:01.932010+00:00"
     },
     {
       "type": "ip",
-      "value": "100.53.25.136",
+      "value": "100.52.239.250",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743254+00:00"
+      "time": "2026-10-28T10:09:01.932012+00:00"
     },
     {
       "type": "ip",
-      "value": "100.56.235.45",
+      "value": "100.54.143.192",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743256+00:00"
+      "time": "2026-10-28T10:09:01.932014+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "100.55.158.230",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.932015+00:00"
     },
     {
       "type": "ip",
@@ -1985,18 +1937,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743258+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "100.58.120.123",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743259+00:00"
+      "time": "2026-10-28T10:09:01.932018+00:00"
     },
     {
       "type": "ip",
@@ -2007,7 +1948,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743261+00:00"
+      "time": "2026-10-28T10:09:01.932020+00:00"
     },
     {
       "type": "ip",
@@ -2018,7 +1959,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743262+00:00"
+      "time": "2026-10-28T10:09:01.932022+00:00"
     },
     {
       "type": "ip",
@@ -2029,7 +1970,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743264+00:00"
+      "time": "2026-10-28T10:09:01.932024+00:00"
     },
     {
       "type": "ip",
@@ -2040,18 +1981,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743265+00:00"
+      "time": "2026-10-28T10:09:01.932025+00:00"
     },
     {
       "type": "ip",
-      "value": "101.109.253.166",
+      "value": "101.108.203.173",
       "source": "Blocklist.de",
       "threat": "high",
       "tags": [
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743267+00:00"
+      "time": "2026-10-28T10:09:01.932029+00:00"
     },
     {
       "type": "ip",
@@ -2062,7 +2003,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743268+00:00"
+      "time": "2026-10-28T10:09:01.932031+00:00"
     },
     {
       "type": "ip",
@@ -2073,7 +2014,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743270+00:00"
+      "time": "2026-10-28T10:09:01.932033+00:00"
     },
     {
       "type": "ip",
@@ -2084,7 +2025,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743273+00:00"
+      "time": "2026-10-28T10:09:01.932035+00:00"
     },
     {
       "type": "ip",
@@ -2095,7 +2036,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743274+00:00"
+      "time": "2026-10-28T10:09:01.932040+00:00"
     },
     {
       "type": "ip",
@@ -2106,7 +2047,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743276+00:00"
+      "time": "2026-10-28T10:09:01.932042+00:00"
     },
     {
       "type": "ip",
@@ -2117,7 +2058,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743278+00:00"
+      "time": "2026-10-28T10:09:01.932043+00:00"
     },
     {
       "type": "ip",
@@ -2128,18 +2069,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743280+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "101.126.64.76",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743281+00:00"
+      "time": "2026-10-28T10:09:01.932046+00:00"
     },
     {
       "type": "ip",
@@ -2150,7 +2080,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743284+00:00"
+      "time": "2026-10-28T10:09:01.932048+00:00"
     },
     {
       "type": "ip",
@@ -2161,7 +2091,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743286+00:00"
+      "time": "2026-10-28T10:09:01.932049+00:00"
     },
     {
       "type": "ip",
@@ -2172,7 +2102,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743288+00:00"
+      "time": "2026-10-28T10:09:01.932051+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "101.126.70.177",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.932053+00:00"
     },
     {
       "type": "ip",
@@ -2183,7 +2124,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743289+00:00"
+      "time": "2026-10-28T10:09:01.932054+00:00"
     },
     {
       "type": "ip",
@@ -2194,7 +2135,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743291+00:00"
+      "time": "2026-10-28T10:09:01.932056+00:00"
     },
     {
       "type": "ip",
@@ -2205,7 +2146,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743293+00:00"
+      "time": "2026-10-28T10:09:01.932058+00:00"
     },
     {
       "type": "ip",
@@ -2216,18 +2157,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743294+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "101.13.2.176",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743296+00:00"
+      "time": "2026-10-28T10:09:01.932060+00:00"
     },
     {
       "type": "ip",
@@ -2238,7 +2168,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743298+00:00"
+      "time": "2026-10-28T10:09:01.932062+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "101.13.2.183",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.932063+00:00"
     },
     {
       "type": "ip",
@@ -2249,7 +2190,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743299+00:00"
+      "time": "2026-10-28T10:09:01.932065+00:00"
     },
     {
       "type": "ip",
@@ -2260,7 +2201,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743300+00:00"
+      "time": "2026-10-28T10:09:01.932067+00:00"
     },
     {
       "type": "ip",
@@ -2271,7 +2212,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743302+00:00"
+      "time": "2026-10-28T10:09:01.932069+00:00"
     },
     {
       "type": "ip",
@@ -2282,7 +2223,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743303+00:00"
+      "time": "2026-10-28T10:09:01.932072+00:00"
     },
     {
       "type": "ip",
@@ -2293,18 +2234,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743307+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "101.13.5.195",
-      "source": "Blocklist.de",
-      "threat": "high",
-      "tags": [
-        "brute-force",
-        "attacker"
-      ],
-      "time": "2026-10-27T09:26:45.743309+00:00"
+      "time": "2026-10-28T10:09:01.932074+00:00"
     },
     {
       "type": "ip",
@@ -2315,7 +2245,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743310+00:00"
+      "time": "2026-10-28T10:09:01.932078+00:00"
     },
     {
       "type": "ip",
@@ -2326,7 +2256,18 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743311+00:00"
+      "time": "2026-10-28T10:09:01.932080+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "101.13.5.30",
+      "source": "Blocklist.de",
+      "threat": "high",
+      "tags": [
+        "brute-force",
+        "attacker"
+      ],
+      "time": "2026-10-28T10:09:01.932082+00:00"
     },
     {
       "type": "ip",
@@ -2337,7 +2278,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743313+00:00"
+      "time": "2026-10-28T10:09:01.932084+00:00"
     },
     {
       "type": "ip",
@@ -2348,7 +2289,7 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743314+00:00"
+      "time": "2026-10-28T10:09:01.932086+00:00"
     },
     {
       "type": "ip",
@@ -2359,2163 +2300,1118 @@
         "brute-force",
         "attacker"
       ],
-      "time": "2026-10-27T09:26:45.743316+00:00"
+      "time": "2026-10-28T10:09:01.932087+00:00"
     },
     {
-      "type": "url",
-      "value": "https://www.roblox.com.et/users/4243002378/profile",
-      "source": "OpenPhish",
+      "type": "ip",
+      "value": "101.13.5.39",
+      "source": "Blocklist.de",
       "threat": "high",
       "tags": [
-        "phishing",
-        "credential-theft"
+        "brute-force",
+        "attacker"
       ],
-      "time": "2026-10-27T09:26:46.504440+00:00"
+      "time": "2026-10-28T10:09:01.932089+00:00"
     },
     {
       "type": "url",
-      "value": "http://bofa-login.vercel.app/",
+      "value": "https://2017-facebook.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504458+00:00"
+      "time": "2026-10-28T10:09:02.680808+00:00"
     },
     {
       "type": "url",
-      "value": "https://chatgpt0005.eu.org/blog/discord-patch-notes-february-4-2026/",
+      "value": "https://www.2017-facebook.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504460+00:00"
+      "time": "2026-10-28T10:09:02.680823+00:00"
     },
     {
       "type": "url",
-      "value": "https://chatgpt0005.eu.org/blog/save-and-display-your-faves-add-discord-shop-marvel-rivals-items-to-your-profiles-wishlist/",
+      "value": "http://microfis-password-recovery.wasmer.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504462+00:00"
+      "time": "2026-10-28T10:09:02.680826+00:00"
     },
     {
       "type": "url",
-      "value": "https://chatgpt0005.eu.org/blog/discord-is-now-on-meta-quest-reach-out-to-your-servers-while-in-vr/",
+      "value": "https://account-security-notification.at-us.therelayservice.com/matpwp/#/main?type=LiveEmail&locale=en&token=GcRCorP2TGBfKv2HKw6ye5hKk-AeOhN5hv1a5vOAVJAltw8RwAu1LH_C8hfzhdDAr7PNqAb3gq1ZelCsdwLW_K65BmXwJZqKm3rnThroG684Z1Y0lSA2su8EQuoknGhQMRctAGRpTLi3jGt7aHzwv9fI84P7twmWwX_9g0k1ZkQUqLp-wmQX4DWHiUwK-2eu9NxCMnZAr08qeaTgvkGLGL09prt_sWL_OWh414PkKaYoEIVqWprPCXGCJfhkWF_x3mDRhqCvtcovxqrR0qj87M9D5ccJNFia0Pf7dnRpPDPD0zdB1x7U_3I9ZOZ9_CpF6WpGT8c_DWHAyRJf1mWT56C0kV_xsC8Bdvz7XWPuJI18z_CErG_mrqt4lUsssys8uBh5r8Zz4O_qL62uYTFmorsuJLb1Fph5Q3p0rIxGDvWJppoEg97pJpqk0_slipkNERwtjljswqECcl68-jYP2DFVj8iiubIwQA_ncOvj5OW2IJCWPQ76HHVeGBDMo41e0BbPdrAf6a7Zyh-bBGjJgWsx3s3KS-NKLcVkk8jCmprFgfC4OQHQYWxPyDWObV3xWXd03TKwX2LuCFWBL95ATvX6FXOHYvvLAfSDAhuwI-QZIVZvAyn3qq_gnKkvLJuEeSuiV-JLo67YjCx_g7OTVi4RHBLC_sentRtQulZ7CjCLennMi8g6svaWrSaxnO9t2fdjs3zolqUDYoJ_5-Wauwdfzuapy_xM5fqKYd86YeWO8F5wzaR_Wjpu4ScwX9xLiYnNSp3SCKGskGX3ZHRHkLaakd7rb2WlN4-3-noeUCs",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504464+00:00"
+      "time": "2026-10-28T10:09:02.680829+00:00"
     },
     {
       "type": "url",
-      "value": "https://chatgpt0005.eu.org/blog/discord-update-december-13-2023-changelog/",
+      "value": "http://g4gx8.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504465+00:00"
+      "time": "2026-10-28T10:09:02.680831+00:00"
     },
     {
       "type": "url",
-      "value": "https://chatgpt0005.eu.org/category/community/",
+      "value": "http://www.flhealthlicense.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504467+00:00"
+      "time": "2026-10-28T10:09:02.680833+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.it-supportdesk.com/signin?t=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFja2luZ190b2tlbiI6ImJhNDFiOWE1LTUxMDgtNDhhZC1hN2YzLTZhNjRkNTUxNDI4OCIsImNlbGwiOiJodHRwczovLzIxZzZqZnZoeTYuZXhlY3V0ZS1hcGkudXMtZWFzdC0yLmFtYXpvbmF3cy5jb20vcHJvZC9hcGkvcGhpc2hpbmdjYW1wYWlnbiIsImNhbXBhaWduX3Rva2VuIjoiNWZmNTE3ZTItNWI4NS00ZjU3LTk4ODYtY2UwMzAzZTBiNzlhIiwidGVzdF90b2tlbiI6ZmFsc2UsImV4dGVybmFsX3RyYWluaW5nIjpmYWxzZSwiZGlyZWN0X2RlbGl2ZXJ5Ijp0cnVlLCJpYXQiOjE3OTI5NDUzMjYsImlzcyI6Imh0dHBzOi8vYXBwLnBoaXNodGhyZWF0LmNvbSIsImV4cCI6MTgwMDcyMTMyNn0.ZjE0oQrgVuD_L_gTWb-i1UIT1dFmj2B1X3BuZ2dXeUw",
+      "value": "https://vortex-auth-proxy.pages.dev/category/safety",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504468+00:00"
+      "time": "2026-10-28T10:09:02.680835+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.id-cms.work/verify/xug2eay6d3ompbaha",
+      "value": "https://vortex-auth-proxy.pages.dev/category/community",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504470+00:00"
+      "time": "2026-10-28T10:09:02.680837+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.id-cms.work/",
+      "value": "http://www.robiox.com.tw/login?returnUrl=2076255335",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504479+00:00"
+      "time": "2026-10-28T10:09:02.680839+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.roblox.et/users/6765120257/profile",
+      "value": "https://bitmartbit.com/m/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504481+00:00"
+      "time": "2026-10-28T10:09:02.680843+00:00"
     },
     {
       "type": "url",
-      "value": "https://comptecaweb-001-site1.ktempurl.com/Agris-Webconnexions/",
+      "value": "https://instagrams.com.vn/b00dxs6bnu5?uc",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504483+00:00"
+      "time": "2026-10-28T10:09:02.680845+00:00"
     },
     {
       "type": "url",
-      "value": "http://www.mlnk.vn/asuar/",
+      "value": "https://dgfcourier.de/Account/LogOn?ReturnUrl=%2f",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504484+00:00"
+      "time": "2026-10-28T10:09:02.680847+00:00"
     },
     {
       "type": "url",
-      "value": "https://statelawfirm.weupdaa.workers.dev/",
+      "value": "http://jasapickuptiktok.gratisongkir.web.id/k",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504486+00:00"
+      "time": "2026-10-28T10:09:02.680849+00:00"
     },
     {
       "type": "url",
-      "value": "https://1url.at/www/robloxuser-951099195-profile",
+      "value": "https://mining-itself-theaters-hewlett.trycloudflare.com/link/usaa2026/usaa2026D/usaa2026D/web/captcha.php",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504488+00:00"
+      "time": "2026-10-28T10:09:02.680851+00:00"
     },
     {
       "type": "url",
-      "value": "http://pub-cf8243e496b946db82fa4374d900d030.r2.dev/30064354gs4.html",
+      "value": "https://u.to/nUnhIg?ssxnxx.com",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504489+00:00"
+      "time": "2026-10-28T10:09:02.680853+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.roblox.com.et/users/4486801085/profile",
+      "value": "http://www.edytryyde.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504490+00:00"
+      "time": "2026-10-28T10:09:02.680855+00:00"
     },
     {
       "type": "url",
-      "value": "https://1kak1anzas.pages.dev/",
+      "value": "https://facebook-login-redirect.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504492+00:00"
+      "time": "2026-10-28T10:09:02.680856+00:00"
     },
     {
       "type": "url",
-      "value": "https://amuento-3278--aumento35.replit.app/",
+      "value": "http://www.xfinityy111.weebly.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504493+00:00"
+      "time": "2026-10-28T10:09:02.680858+00:00"
     },
     {
       "type": "url",
-      "value": "https://confrmpges-pgesacct.github.io/",
+      "value": "http://www.loginn-orangnews.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504495+00:00"
+      "time": "2026-10-28T10:09:02.680860+00:00"
     },
     {
       "type": "url",
-      "value": "https://ajeetkumaryadav565-hue.github.io/Netflix-clone/",
+      "value": "http://loginn-orangnews.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504497+00:00"
+      "time": "2026-10-28T10:09:02.680862+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.16156655.com/m/",
+      "value": "https://lezgercomstrt.gitbook.io/us",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504498+00:00"
+      "time": "2026-10-28T10:09:02.680864+00:00"
     },
     {
       "type": "url",
-      "value": "https://idporten-norge.vercel.app/page4.html",
+      "value": "https://lezgercomstrt.gitbook.io/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504500+00:00"
+      "time": "2026-10-28T10:09:02.680866+00:00"
     },
     {
       "type": "url",
-      "value": "https://idporten-norge.vercel.app/page1.7.html",
+      "value": "https://uspss.pages.dev/entreg/LoginAction_input%252CN/A%252Chttps%253A/manage/index.html/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504501+00:00"
+      "time": "2026-10-28T10:09:02.680868+00:00"
     },
     {
       "type": "url",
-      "value": "https://whitliongecuadorera--ecuadorsurgee.replit.app/",
+      "value": "https://www.roblox.ly/users/8507824409/profile",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504503+00:00"
+      "time": "2026-10-28T10:09:02.680870+00:00"
     },
     {
       "type": "url",
-      "value": "https://start-ldgercom-faq.typedream.app/",
+      "value": "https://www.mercadolibre.com.pe/gz/account-verification?go=https%3A%2F%2Farticulo.mercadolibre.com.pe%2FMPE-833186620-zapatillas-adidas-urbano-street-talk-hombre-negro-jp8276-_JM%2F&tid=29e3f328-21a7-4745-bd50-33c513c47daf",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504504+00:00"
+      "time": "2026-10-28T10:09:02.680871+00:00"
     },
     {
       "type": "url",
-      "value": "https://idporten-norge.vercel.app/page3.html",
+      "value": "http://articulo.mercadolibre.com.pe/MPE-833186620-zapatillas-adidas-urbano-street-talk-hombre-negro-jp8276-_JM/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504506+00:00"
+      "time": "2026-10-28T10:09:02.680873+00:00"
     },
     {
       "type": "url",
-      "value": "https://idporten-norge.vercel.app/page2.html",
+      "value": "https://app81-facebook.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504508+00:00"
+      "time": "2026-10-28T10:09:02.680875+00:00"
     },
     {
       "type": "url",
-      "value": "https://idporten-norge.vercel.app/page1.5.html",
+      "value": "https://www.roblox.et/games/2753915549/Blox-Fruits?privateServerLinkCode=02267586384328286654717935536971",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504509+00:00"
+      "time": "2026-10-28T10:09:02.680877+00:00"
     },
     {
       "type": "url",
-      "value": "https://idporten-norge.vercel.app/page3.5.html",
+      "value": "https://s4w.in/www-roblox-com-games-2753915549-Blox-FruitsprivateServerLinkCode=02267586384328286654717935536971",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504511+00:00"
+      "time": "2026-10-28T10:09:02.680879+00:00"
     },
     {
       "type": "url",
-      "value": "https://mayank-kumar-2006.github.io/Netflix-clone/",
+      "value": "https://external-stop-send-vatican.trycloudflare.com/Desktop",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504513+00:00"
+      "time": "2026-10-28T10:09:02.680881+00:00"
     },
     {
       "type": "url",
-      "value": "https://scmetaaaaa.vercel.app/index1.html",
+      "value": "https://photograph-natural-consequences-marks.trycloudflare.com/Desktop",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504514+00:00"
+      "time": "2026-10-28T10:09:02.680883+00:00"
     },
     {
       "type": "url",
-      "value": "https://1zy3cp.dt68-vn.net/",
+      "value": "http://freshdesk.vodafone-dachau.de/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504516+00:00"
+      "time": "2026-10-28T10:09:02.680885+00:00"
     },
     {
       "type": "url",
-      "value": "http://www.robiox.com.tw/users/2076255335/profile/",
+      "value": "https://newportcaremedicalgroup.weupdaa.workers.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504517+00:00"
+      "time": "2026-10-28T10:09:02.680886+00:00"
     },
     {
       "type": "url",
-      "value": "https://bancolombbia.vercel.app/",
+      "value": "http://healthlicensefl.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504519+00:00"
+      "time": "2026-10-28T10:09:02.680888+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.r.oblox.com.et/users/6525325044/profile",
+      "value": "https://floridahealth-gamma.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504520+00:00"
+      "time": "2026-10-28T10:09:02.680890+00:00"
     },
     {
       "type": "url",
-      "value": "http://ep-02cdn7pyyiawnb-hchudpbkb3c2hugy.z01.azurefd.net/",
+      "value": "https://floridahealth-plum.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504522+00:00"
+      "time": "2026-10-28T10:09:02.680892+00:00"
     },
     {
       "type": "url",
-      "value": "https://bitly.cx/pkIb/",
+      "value": "http://sp29ct-femak-biz-zulun-ravti.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504524+00:00"
+      "time": "2026-10-28T10:09:02.680894+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.robiox.com.tw/games/8304191830/april-fool-s-anime-adventures?privateServerLinkCode=67189261356885495220033690412960",
+      "value": "http://sp13ct-hazrek-biz-kormik-frandel.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504525+00:00"
+      "time": "2026-10-28T10:09:02.680896+00:00"
     },
     {
       "type": "url",
-      "value": "http://restorefunction-aus3-2j3h9d.web.app/",
+      "value": "http://healthlicensefl-amber.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504527+00:00"
+      "time": "2026-10-28T10:09:02.680898+00:00"
     },
     {
       "type": "url",
-      "value": "https://zingy-rabanadas-e6105f.netlify.app/download-invoice.netlify.app/index.html",
+      "value": "http://sp26ct10-ravmiko-biz-zuleni.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504529+00:00"
+      "time": "2026-10-28T10:09:02.680900+00:00"
     },
     {
       "type": "url",
-      "value": "http://zingy-rabanadas-e6105f.netlify.app/",
+      "value": "https://sp13ct-kansik-biz-fravdok-zermel.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504531+00:00"
+      "time": "2026-10-28T10:09:02.680902+00:00"
     },
     {
       "type": "url",
-      "value": "http://www.okta.everydaycollectivecom.io/",
+      "value": "https://sp13ct-zormor-biz-lavsel-krandik.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504532+00:00"
+      "time": "2026-10-28T10:09:02.680904+00:00"
     },
     {
       "type": "url",
-      "value": "https://valenciawilberdingromero.weupdaa.workers.dev/",
+      "value": "http://sp14ct-holrek-biz-vastor-lenmik.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504534+00:00"
+      "time": "2026-10-28T10:09:02.680906+00:00"
     },
     {
       "type": "url",
-      "value": "https://usps-for-business-website-2-1.vercel.app/",
+      "value": "https://sp14ct-folzak-biz-harmek-lenvik.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504535+00:00"
+      "time": "2026-10-28T10:09:02.680908+00:00"
     },
     {
       "type": "url",
-      "value": "http://tokevim-cdn32-hk61.lol/",
+      "value": "http://sp26ct10-zorleko-biz-vumati.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504537+00:00"
+      "time": "2026-10-28T10:09:02.680910+00:00"
     },
     {
       "type": "url",
-      "value": "https://kxtrn8fdran-yrpknlpw-3p6n8d-yr288a.pages.dev/",
+      "value": "http://mldpt42bfrn-wjlnfskr-8r1m5g-mldq11c.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504538+00:00"
+      "time": "2026-10-28T10:09:02.680912+00:00"
     },
     {
       "type": "url",
-      "value": "http://sp30ct-qorik-biz-vanel-zumad.pages.dev/",
+      "value": "https://sp14ct-vesnik-biz-lormak-hartel.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504540+00:00"
+      "time": "2026-10-28T10:09:02.680914+00:00"
     },
     {
       "type": "url",
-      "value": "http://xc07t-qxf4-kxh-pqj3j-bvkzi.pages.dev/",
+      "value": "http://healthlicensefl-beta.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504542+00:00"
+      "time": "2026-10-28T10:09:02.680916+00:00"
     },
     {
       "type": "url",
-      "value": "https://sp30ct-kalun-biz-vorex-zemik.pages.dev/",
+      "value": "https://3r5-duv-yb0y1l-nlmmo3-6pvmt9.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504543+00:00"
+      "time": "2026-10-28T10:09:02.680918+00:00"
     },
     {
       "type": "url",
-      "value": "http://sp30ct-vurik-biz-mavel-zanoq.pages.dev/",
+      "value": "https://sp15ct-nulvax-biz-melzen-ravok.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504545+00:00"
+      "time": "2026-10-28T10:09:02.680920+00:00"
     },
     {
       "type": "url",
-      "value": "http://sp29ct-tavro-biz-kemti-zulfa.pages.dev/",
+      "value": "http://corpmail.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504547+00:00"
+      "time": "2026-10-28T10:09:02.680921+00:00"
     },
     {
       "type": "url",
-      "value": "http://hlgf451lkwg-zktp2pli-9or85d-hlg77c.pages.dev/",
+      "value": "http://sp18ct10-sulvak-biz-qiremi.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504548+00:00"
+      "time": "2026-10-28T10:09:02.680923+00:00"
     },
     {
       "type": "url",
-      "value": "https://sp30ct-tavor-biz-zunel-mekix.pages.dev/",
+      "value": "https://sp13ct-lorsel-biz-prandor-vazmik.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504550+00:00"
+      "time": "2026-10-28T10:09:02.680925+00:00"
     },
     {
       "type": "url",
-      "value": "https://sp29ct-vurro-biz-kemun-fazti.pages.dev/",
+      "value": "https://sp14ct-folsak-biz-lemtar-vornik.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504552+00:00"
+      "time": "2026-10-28T10:09:02.680927+00:00"
     },
     {
       "type": "url",
-      "value": "https://sp30ct-turev-biz-qalun-mexok.pages.dev/",
+      "value": "https://sp15ct-kavrun-biz-zelqor-nuvak.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504553+00:00"
+      "time": "2026-10-28T10:09:02.680929+00:00"
     },
     {
       "type": "url",
-      "value": "http://9avv4-qlih-e7na6-eus7-qjjv67.pages.dev/",
+      "value": "http://xygkc-b0iw-5y3g-w1a9-n165n0.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504555+00:00"
+      "time": "2026-10-28T10:09:02.680930+00:00"
     },
     {
       "type": "url",
-      "value": "https://sp30ct-mavel-biz-qurix-denok.pages.dev/",
+      "value": "https://sp28ct5-davri-biz-molun-zekra.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504556+00:00"
+      "time": "2026-10-28T10:09:02.680932+00:00"
     },
     {
       "type": "url",
-      "value": "http://0jcql-vl8-9bh9-8a9i-umcy.pages.dev/",
+      "value": "https://sp29ct-kavri-biz-melun-fetro.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504558+00:00"
+      "time": "2026-10-28T10:09:02.680934+00:00"
     },
     {
       "type": "url",
-      "value": "http://4teh-hcp-c7xj-32qw-1nx5-3qiv.pages.dev/",
+      "value": "http://sp13ct-pradik-biz-zormel-lansor.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504559+00:00"
+      "time": "2026-10-28T10:09:02.680936+00:00"
     },
     {
       "type": "url",
-      "value": "http://sp30ct-talik-biz-murex-vokon.pages.dev/",
+      "value": "http://sp15ct-fenoro-biz-davik-sulem.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504561+00:00"
+      "time": "2026-10-28T10:09:02.680938+00:00"
     },
     {
       "type": "url",
-      "value": "https://ywsd73bpzgo-qbxj5lsi-7r6p4b-ywsq66c.pages.dev/",
+      "value": "http://sp20ct10-kavveta-biz-zuniro.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504563+00:00"
+      "time": "2026-10-28T10:09:02.680940+00:00"
     },
     {
       "type": "url",
-      "value": "http://7kn7v7-3vl-yqx-97hi6-knj.pages.dev/",
+      "value": "https://sp13ct-larmek-biz-zondik-frasel.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504564+00:00"
+      "time": "2026-10-28T10:09:02.680941+00:00"
     },
     {
       "type": "url",
-      "value": "http://mbtzp625nhw-fsgcyfyn-8t3s5g-qw166a24f.pages.dev/",
+      "value": "http://sp29ct-norak-biz-felun-zavri.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504566+00:00"
+      "time": "2026-10-28T10:09:02.680943+00:00"
     },
     {
       "type": "url",
-      "value": "https://7atjlc-blga02-axtt-3tki-4gr.pages.dev/",
+      "value": "https://sp30ct10-rumleko-biz-zureti.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504567+00:00"
+      "time": "2026-10-28T10:09:02.680945+00:00"
     },
     {
       "type": "url",
-      "value": "http://sp30ct-vadex-biz-qanik-rumol.pages.dev/",
+      "value": "http://sp14ct-vorsak-biz-lentor-kramik.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504569+00:00"
+      "time": "2026-10-28T10:09:02.680947+00:00"
     },
     {
       "type": "url",
-      "value": "http://portaldigital-br.com/login/?ninja=consulteagora",
+      "value": "http://sp15ct-mavzel-biz-qurix-kavun.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504570+00:00"
+      "time": "2026-10-28T10:09:02.680949+00:00"
     },
     {
       "type": "url",
-      "value": "https://survey-fai80fkrjlrp.organellee.com/kurier/index.php",
+      "value": "https://sp15ct-lunaro-biz-pelix-zurem.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504572+00:00"
+      "time": "2026-10-28T10:09:02.680951+00:00"
     },
     {
       "type": "url",
-      "value": "https://workonc.top/kkk/?pixel=1878409809854532&ef=1",
+      "value": "https://sp30ct-zemik-biz-ravun-qelor.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504573+00:00"
+      "time": "2026-10-28T10:09:02.680952+00:00"
     },
     {
       "type": "url",
-      "value": "https://473621.com/",
+      "value": "http://tiendatigard.com.mx/work/Adobe_Installer.html?mc_phishing_protection_id=191110-dbgdp49h9tjvg075eig0",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504575+00:00"
+      "time": "2026-10-28T10:09:02.680955+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.iclreg.pro/verify/qa2rwvpsni113iprbfw5",
+      "value": "https://sp15ct-lumari-biz-pelox-vunek.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504577+00:00"
+      "time": "2026-10-28T10:09:02.680956+00:00"
     },
     {
       "type": "url",
-      "value": "http://iclreg.pro/",
+      "value": "https://sp15ct-felavi-biz-zunor-mekav.pages.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504578+00:00"
+      "time": "2026-10-28T10:09:02.680958+00:00"
     },
     {
       "type": "url",
-      "value": "https://br1.spabcb.shop/brgtm/?pixel=1878409809854532&ef=1",
+      "value": "https://shorturl.lt/Evadian-Community",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504580+00:00"
+      "time": "2026-10-28T10:09:02.680960+00:00"
     },
     {
       "type": "url",
-      "value": "https://www.twh081.vercel.app/",
+      "value": "https://www.roblox.ly/communities/9292895249/Evade-Community",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504582+00:00"
+      "time": "2026-10-28T10:09:02.680962+00:00"
     },
     {
       "type": "url",
-      "value": "https://workond.top/kkk/?pixel=2321424635364697",
+      "value": "https://www.0ff1ce365.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504583+00:00"
+      "time": "2026-10-28T10:09:02.680964+00:00"
     },
     {
       "type": "url",
-      "value": "https://panmxwk.shop/kkk/?pixel=2321424635364697",
+      "value": "https://www.wbed.wizaweb.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504585+00:00"
+      "time": "2026-10-28T10:09:02.680966+00:00"
     },
     {
       "type": "url",
-      "value": "https://br3.mlmldd.top/brgtm/?pixel=2321424635364697",
+      "value": "https://facebooklogin1234.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504586+00:00"
+      "time": "2026-10-28T10:09:02.680968+00:00"
     },
     {
       "type": "url",
-      "value": "https://87364093.edgeone.cool/?454a304321fd8d650db",
+      "value": "http://trzr-io-starts.square.site/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504588+00:00"
+      "time": "2026-10-28T10:09:02.680969+00:00"
     },
     {
       "type": "url",
-      "value": "http://everydaycollectivecom.io/",
+      "value": "https://spotifymode.org/es/download/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504590+00:00"
+      "time": "2026-10-28T10:09:02.680971+00:00"
     },
     {
       "type": "url",
-      "value": "http://rajasthanstone.co.in/globalsource.com/BUYERSTATUS/inquiry/products/login.globalsource.com/html",
+      "value": "http://updatesnotified.com/concluded.php?k=a52d0d14aa1f83a6c7b361d200f9cf906fa796a1",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504591+00:00"
+      "time": "2026-10-28T10:09:02.680973+00:00"
     },
     {
       "type": "url",
-      "value": "https://2610frlan-7lm57dkm.4everland.app/",
+      "value": "https://spotifymode.org/download/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504593+00:00"
+      "time": "2026-10-28T10:09:02.680975+00:00"
     },
     {
       "type": "url",
-      "value": "https://themvptriallawyers.weupdaa.workers.dev/",
+      "value": "https://pemudian-dana.pages.dev/dana.mp4/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504594+00:00"
+      "time": "2026-10-28T10:09:02.680977+00:00"
     },
     {
       "type": "url",
-      "value": "https://hhnbggh.jimdofree.com/",
+      "value": "https://global-fuchsia-9par6vcz-dp5x4caf1rmk.edgeone.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504596+00:00"
+      "time": "2026-10-28T10:09:02.680978+00:00"
     },
     {
       "type": "url",
-      "value": "https://eyeearhospital.com/bnd/index.html",
+      "value": "http://www.world-support.online/dhl-express.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504598+00:00"
+      "time": "2026-10-28T10:09:02.680980+00:00"
     },
     {
       "type": "url",
-      "value": "https://moonpay-commerce-git-fix-com2-4528-heliofi.vercel.app/",
+      "value": "https://www.roblox.com.ml/users/297202106536/profile",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504600+00:00"
+      "time": "2026-10-28T10:09:02.680982+00:00"
     },
     {
       "type": "url",
-      "value": "https://135461223.site/fi/2309/59af7665-3b57-441b-b825-17649f1cc7ba/763264/x",
+      "value": "http://flnd-my-iphone.com/?i=nh0",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504601+00:00"
+      "time": "2026-10-28T10:09:02.680983+00:00"
     },
     {
       "type": "url",
-      "value": "https://135461223.site/2309/59af7665-3b57-441b-b825-17649f1cc7ba/763264",
+      "value": "https://hellmich-hill-retter-llc-secured-document.antonina-korenha.workers.dev/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504603+00:00"
+      "time": "2026-10-28T10:09:02.680985+00:00"
     },
     {
       "type": "url",
-      "value": "https://135461223.site/fi/2309/59af7665-3b57-441b-b825-17649f1cc7ba/763264",
+      "value": "http://www-apple.support/?i=nh0",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504604+00:00"
+      "time": "2026-10-28T10:09:02.680987+00:00"
     },
     {
       "type": "url",
-      "value": "https://obterrdescontoss-app.com/produto/1307962",
+      "value": "http://tropicdaysboutique.hostel.town/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504606+00:00"
+      "time": "2026-10-28T10:09:02.680989+00:00"
     },
     {
       "type": "url",
-      "value": "https://bretil.netlify.app/",
+      "value": "https://brad-facebook.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504607+00:00"
+      "time": "2026-10-28T10:09:02.680990+00:00"
     },
     {
       "type": "url",
-      "value": "https://bdvonline-registrate--ppsickkke.replit.app/",
+      "value": "https://www.facebook-login0.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504609+00:00"
+      "time": "2026-10-28T10:09:02.680992+00:00"
     },
     {
       "type": "url",
-      "value": "https://anjalinishad133.github.io/Netflix-clone/",
+      "value": "https://www.jj-facebook.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504610+00:00"
+      "time": "2026-10-28T10:09:02.680994+00:00"
     },
     {
       "type": "url",
-      "value": "https://cnfrmaccs-home0log.github.io/",
+      "value": "https://1url.at/www/robloxuser-951099781-profile",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504612+00:00"
+      "time": "2026-10-28T10:09:02.680996+00:00"
     },
     {
       "type": "url",
-      "value": "https://web.mobileatticms.com/b4638c9dccaab",
+      "value": "https://auths-autoscout24.auth-id67373.icu/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504614+00:00"
+      "time": "2026-10-28T10:09:02.680998+00:00"
     },
     {
       "type": "url",
-      "value": "http://sp30ct10-zelvemi-biz-zunaro-7f2.pages.dev/",
+      "value": "https://jj-facebook.blogspot.com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504615+00:00"
+      "time": "2026-10-28T10:09:02.680999+00:00"
     },
     {
       "type": "url",
-      "value": "https://robloxc.com.es/users/951099436/profile",
+      "value": "https://regulamentacaogov.click/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504617+00:00"
+      "time": "2026-10-28T10:09:02.681001+00:00"
     },
     {
       "type": "url",
-      "value": "http://sp28ct-davem-biz-zunul-vitek.pages.dev/",
+      "value": "https://mbscae.eventzones.de/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504619+00:00"
+      "time": "2026-10-28T10:09:02.681003+00:00"
     },
     {
       "type": "url",
-      "value": "https://lhmlpj-a4k9a-mhh14-sszbh.pages.dev/",
+      "value": "https://comunicaciones365supp.vercel.app/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504620+00:00"
+      "time": "2026-10-28T10:09:02.681005+00:00"
     },
     {
       "type": "url",
-      "value": "http://5ly-8ryff9-y2hedo-lh0l-xeq4c2.pages.dev/",
+      "value": "https://vmi3578020.contaboserver.net/corr/cc/login.php",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
       ],
-      "time": "2026-10-27T09:26:46.504621+00:00"
+      "time": "2026-10-28T10:09:02.681007+00:00"
     },
     {
       "type": "url",
-      "value": "http://sp30ct10-norlevo-biz-zuneti.pages.dev/",
+      "value": "http://df888blog.com/com/",
       "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
         "credential-theft"
-      ],
-      "time": "2026-10-27T09:26:46.504623+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://p0shmark.308627951.cfd/5dGvZEcudsow2VoaqNG3UbpA",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T09:21:23+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://sesja-2m0e-pkobiznes-firma.lapax.net/pl-PL/logowanie?sid=0d2fcb8456fef32c2ed3b115a9832788",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T09:21:23+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://sesja-5x5y-pkobiznes-firma.lapaxe.com/pl-PL/logowanie?sid=23a6c43c6895f2fdd70858be69e16714",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T09:02:16+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://sesja-3i7r-pkobiznes.pl-firma.net/-/logowanie?sid=f16f1d3eb6fa7a22ac66d86d3f0e5848",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:41:38+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://share.google/iYE6MUd0qvGtsup7V",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:41:38+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://sage-puffpuff-bb9777.netlify.app/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:31:29+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://sesja-3c6d-pkobiznes.pl-firma.net/-/logowanie?sid=bff13be1adb29e88966faf20e8f84fa5",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:18+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://ipkobizness-pl.infotelsrore.com/ipkobz/web/login.php",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:18+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://ipko.logowanie.pl.misalpeyzaj.com/home.html",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:18+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://ipko.logowanie.pl.misalpeyzaj.com/home/auth/biz.php",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:18+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://sesja-8e6c-pkobiznes.pl-firma.net/-/logowanie?sid=1c917fe712eac7fd34c03719459ebd42",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:11:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://elegant-sopapillas-d9528e.netlify.app/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:02:06+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bdv-2026-portal--2026tubdv.replit.app/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:51:36+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://jepebanget.xyz/nxsuh",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:51:36+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://a-silverconnection.com/wp-includes/ID3/webmail/aruba/it/user/login/verify_your_identity/aruba/aruba.it/your_aruba.email.account/resolve_reception_error/my_account/mailbox/cms/index.html",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:18+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://sesja-2a9h-pkobiznes.pl-firma.net/-/logowanie?sid=dceb2e80c5d3a64ef5109ddc54c4ca69",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://autho-facebook-appp.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Facebook"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://xfinityhelplogin.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Comcast"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://signin-xfinlty.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Comcast"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://commrcssasvhv.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Comcast"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://cccomcmaasttxxffintuy.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Comcast"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://gdfhwd.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Comcast"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://xxfinnityccomcast.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Comcast"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://xfinityupdatessss.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Comcast"
-      ],
-      "time": "2026-10-27T07:41:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://xfinitymailbox1.weebly.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:31:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://cvnggjj.jimdofree.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:31:22+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://scuresginfos.webflow.io/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "SociÃ©tÃ© GÃ©nÃ©rale"
-      ],
-      "time": "2026-10-27T07:21:40+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://moncertcodelbp.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "La Banque Postale"
-      ],
-      "time": "2026-10-27T07:21:40+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://moncertcodelbp.com/index.php",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "La Banque Postale"
-      ],
-      "time": "2026-10-27T07:21:40+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://sesja-3v0y-pkobiznes.pl-firma.net/-/logowanie?sid=16dc787bd242271dbe4c3c1fcab8eed7",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:21:40+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://sesja-9n3y-pkobiznes.pl-firma.net/-/logowanie?sid=2af0a350813a6da92c0be489b7568ad0",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:21:40+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://retrait-gain.info/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:11:28+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://www.retrait-gain.info/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:11:28+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://aruba-email-serviziodiverifica.s1275818.ha012.t.mydomain.zone/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:11:28+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://detectioncenter-case100055111.web.app/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:19+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://detectioncenter-case100055111.firebaseapp.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
       ],
-      "time": "2026-10-27T08:21:19+00:00"
+      "time": "2026-10-28T10:09:02.681012+00:00"
     },
     {
       "type": "url",
-      "value": "http://detectioncenter-case1000555111.firebaseapp.com/",
-      "source": "PhishTank",
+      "value": "https://wyzkdev.github.io/HTML-CLON-NETFLIX",
+      "source": "OpenPhish",
       "threat": "high",
       "tags": [
         "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:19+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://detectioncenter-case100052351.web.app/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:19+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://detectioncenter-case100052351.firebaseapp.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:19+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://detectioncenter-case100051351.web.app/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T08:21:19+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://85.215.226.225/Netflix/Home/login.php",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Netflix"
-      ],
-      "time": "2026-10-27T07:01:57+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://mitamxsklgxn.gitbook.io/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:01:57+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://mitamxsklgxn.gitbook.io/us",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:01:57+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://coinstarbizz.gitbook.io/us",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:01:57+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://coinstarbizz.gitbook.io/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T07:01:57+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://206.209.210.20/yahoo/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Yahoo"
-      ],
-      "time": "2026-10-27T07:01:57+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://148.72.244.125/yahoo/login.html",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Yahoo"
-      ],
-      "time": "2026-10-27T07:01:57+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.pl-oferta963287151.cfd",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:41:31+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegrolokalnie.pl-oferta963287151.cfd",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:41:31+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://id-so-net-ne-jp.duckdns.org",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://app.clientedigital.info/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.validacaoempresas.pro/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.validacaoempresas.click/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.validacaoempresas.live/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.validacaoempresas.info/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.sistematopaz.app/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.sistematopaz.digital/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.sistematopaz.pro/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://allegrolokalnie.pl743577456323.shop",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://allegro.pl-ogloszenie1289191.shop",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.hjo65ih87f23f23.forum",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://allegro.prwa7n78459h45.casa",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.sistematopaz.click/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.banconet-empresa.net/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.sistematopaz.live/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.sistematopaz.info/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.pjatualizacaosegura.live/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.acessarchat.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://bradesco.topazseguro.live/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.bobm839125.casa",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://allegro.icon38120957.beer",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:31:35+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://app.bonificacaocliente.info/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://pjsuportejuridico.net/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegrolokalnie.pl-783642.sbs",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.sma9h04g45f23.buzz",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://app.bonificacaocliente.digital/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.sm299g87.mom",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegrolokalnie.8376521.top",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.moet238h45d1230.pics",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://app.clienteonline.shop/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://marouanetifo1790733137047.1881624.meusitehostgator.com.br/login.html?type=full",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.msar8239h45203.forum",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://app.clientedigital.click/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://allegro.1230098h854fo.forum",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.pot4377j568jh.casa",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.sajr2838549h.pics",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegrolokalnie.pl-bnmj5.sbs",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegrolokalnie.pl68931.store",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://app.bonificacaocliente.click/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegrolokalnie.pl-618402.sbs",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://suportenetgerentejuridico.digital/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:21:43+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://atualizacaonetempresas.app/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:11:44+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://dinersmiles.shop/consulta",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:11:44+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://acessojuridicopj.com/",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Other"
-      ],
-      "time": "2026-10-27T04:11:44+00:00"
-    },
-    {
-      "type": "url",
-      "value": "https://allegro.8376521.top",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
-      ],
-      "time": "2026-10-27T04:11:44+00:00"
-    },
-    {
-      "type": "url",
-      "value": "http://allegro.smar845h95634.casa",
-      "source": "PhishTank",
-      "threat": "high",
-      "tags": [
-        "phishing",
-        "Allegro"
+        "credential-theft"
       ],
-      "time": "2026-10-27T04:11:44+00:00"
+      "time": "2026-10-28T10:09:02.681013+00:00"
     },
     {
       "type": "ip",
@@ -4526,7 +3422,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432582+00:00"
+      "time": "2026-10-28T10:09:03.036764+00:00"
     },
     {
       "type": "ip",
@@ -4537,7 +3433,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432605+00:00"
+      "time": "2026-10-28T10:09:03.036781+00:00"
     },
     {
       "type": "ip",
@@ -4548,7 +3444,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432607+00:00"
+      "time": "2026-10-28T10:09:03.036785+00:00"
     },
     {
       "type": "ip",
@@ -4559,7 +3455,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432609+00:00"
+      "time": "2026-10-28T10:09:03.036787+00:00"
     },
     {
       "type": "ip",
@@ -4570,7 +3466,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432610+00:00"
+      "time": "2026-10-28T10:09:03.036789+00:00"
     },
     {
       "type": "ip",
@@ -4581,7 +3477,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432612+00:00"
+      "time": "2026-10-28T10:09:03.036791+00:00"
     },
     {
       "type": "ip",
@@ -4592,7 +3488,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432614+00:00"
+      "time": "2026-10-28T10:09:03.036793+00:00"
     },
     {
       "type": "ip",
@@ -4603,7 +3499,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432616+00:00"
+      "time": "2026-10-28T10:09:03.036795+00:00"
     },
     {
       "type": "ip",
@@ -4614,7 +3510,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432617+00:00"
+      "time": "2026-10-28T10:09:03.036797+00:00"
     },
     {
       "type": "ip",
@@ -4625,7 +3521,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432618+00:00"
+      "time": "2026-10-28T10:09:03.036798+00:00"
     },
     {
       "type": "ip",
@@ -4636,7 +3532,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432620+00:00"
+      "time": "2026-10-28T10:09:03.036800+00:00"
     },
     {
       "type": "ip",
@@ -4647,7 +3543,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432621+00:00"
+      "time": "2026-10-28T10:09:03.036802+00:00"
     },
     {
       "type": "ip",
@@ -4658,7 +3554,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432623+00:00"
+      "time": "2026-10-28T10:09:03.036804+00:00"
     },
     {
       "type": "ip",
@@ -4669,7 +3565,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432624+00:00"
+      "time": "2026-10-28T10:09:03.036806+00:00"
     },
     {
       "type": "ip",
@@ -4680,7 +3576,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432626+00:00"
+      "time": "2026-10-28T10:09:03.036808+00:00"
     },
     {
       "type": "ip",
@@ -4691,7 +3587,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432627+00:00"
+      "time": "2026-10-28T10:09:03.036809+00:00"
     },
     {
       "type": "ip",
@@ -4702,7 +3598,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432629+00:00"
+      "time": "2026-10-28T10:09:03.036811+00:00"
     },
     {
       "type": "ip",
@@ -4713,7 +3609,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432630+00:00"
+      "time": "2026-10-28T10:09:03.036814+00:00"
     },
     {
       "type": "ip",
@@ -4724,7 +3620,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432631+00:00"
+      "time": "2026-10-28T10:09:03.036815+00:00"
     },
     {
       "type": "ip",
@@ -4735,7 +3631,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432633+00:00"
+      "time": "2026-10-28T10:09:03.036817+00:00"
     },
     {
       "type": "ip",
@@ -4746,7 +3642,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432634+00:00"
+      "time": "2026-10-28T10:09:03.036819+00:00"
     },
     {
       "type": "ip",
@@ -4757,7 +3653,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432636+00:00"
+      "time": "2026-10-28T10:09:03.036821+00:00"
     },
     {
       "type": "ip",
@@ -4768,7 +3664,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432637+00:00"
+      "time": "2026-10-28T10:09:03.036823+00:00"
     },
     {
       "type": "ip",
@@ -4779,7 +3675,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432639+00:00"
+      "time": "2026-10-28T10:09:03.036825+00:00"
     },
     {
       "type": "ip",
@@ -4790,7 +3686,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432640+00:00"
+      "time": "2026-10-28T10:09:03.036827+00:00"
     },
     {
       "type": "ip",
@@ -4801,7 +3697,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432642+00:00"
+      "time": "2026-10-28T10:09:03.036829+00:00"
     },
     {
       "type": "ip",
@@ -4812,7 +3708,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432643+00:00"
+      "time": "2026-10-28T10:09:03.036831+00:00"
     },
     {
       "type": "ip",
@@ -4823,7 +3719,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432644+00:00"
+      "time": "2026-10-28T10:09:03.036833+00:00"
     },
     {
       "type": "ip",
@@ -4834,7 +3730,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432646+00:00"
+      "time": "2026-10-28T10:09:03.036835+00:00"
     },
     {
       "type": "ip",
@@ -4845,7 +3741,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432647+00:00"
+      "time": "2026-10-28T10:09:03.036837+00:00"
     },
     {
       "type": "ip",
@@ -4856,7 +3752,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432649+00:00"
+      "time": "2026-10-28T10:09:03.036839+00:00"
     },
     {
       "type": "ip",
@@ -4867,7 +3763,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432650+00:00"
+      "time": "2026-10-28T10:09:03.036841+00:00"
     },
     {
       "type": "ip",
@@ -4878,7 +3774,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432651+00:00"
+      "time": "2026-10-28T10:09:03.036842+00:00"
     },
     {
       "type": "ip",
@@ -4889,7 +3785,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432653+00:00"
+      "time": "2026-10-28T10:09:03.036844+00:00"
     },
     {
       "type": "ip",
@@ -4900,7 +3796,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432654+00:00"
+      "time": "2026-10-28T10:09:03.036846+00:00"
     },
     {
       "type": "ip",
@@ -4911,7 +3807,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432655+00:00"
+      "time": "2026-10-28T10:09:03.036981+00:00"
     },
     {
       "type": "ip",
@@ -4922,7 +3818,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432657+00:00"
+      "time": "2026-10-28T10:09:03.036984+00:00"
     },
     {
       "type": "ip",
@@ -4933,7 +3829,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432658+00:00"
+      "time": "2026-10-28T10:09:03.036986+00:00"
     },
     {
       "type": "ip",
@@ -4944,7 +3840,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432659+00:00"
+      "time": "2026-10-28T10:09:03.036988+00:00"
     },
     {
       "type": "ip",
@@ -4955,7 +3851,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432661+00:00"
+      "time": "2026-10-28T10:09:03.036990+00:00"
     },
     {
       "type": "ip",
@@ -4966,7 +3862,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432662+00:00"
+      "time": "2026-10-28T10:09:03.036992+00:00"
     },
     {
       "type": "ip",
@@ -4977,7 +3873,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432664+00:00"
+      "time": "2026-10-28T10:09:03.036994+00:00"
     },
     {
       "type": "ip",
@@ -4988,7 +3884,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432665+00:00"
+      "time": "2026-10-28T10:09:03.036996+00:00"
     },
     {
       "type": "ip",
@@ -4999,7 +3895,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432666+00:00"
+      "time": "2026-10-28T10:09:03.036997+00:00"
     },
     {
       "type": "ip",
@@ -5010,7 +3906,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432668+00:00"
+      "time": "2026-10-28T10:09:03.036999+00:00"
     },
     {
       "type": "ip",
@@ -5021,7 +3917,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432669+00:00"
+      "time": "2026-10-28T10:09:03.037001+00:00"
     },
     {
       "type": "ip",
@@ -5032,7 +3928,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432670+00:00"
+      "time": "2026-10-28T10:09:03.037003+00:00"
     },
     {
       "type": "ip",
@@ -5043,7 +3939,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432672+00:00"
+      "time": "2026-10-28T10:09:03.037005+00:00"
     },
     {
       "type": "ip",
@@ -5054,7 +3950,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432673+00:00"
+      "time": "2026-10-28T10:09:03.037006+00:00"
     },
     {
       "type": "ip",
@@ -5065,7 +3961,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432674+00:00"
+      "time": "2026-10-28T10:09:03.037008+00:00"
     },
     {
       "type": "ip",
@@ -5076,7 +3972,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432676+00:00"
+      "time": "2026-10-28T10:09:03.037010+00:00"
     },
     {
       "type": "ip",
@@ -5087,7 +3983,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432677+00:00"
+      "time": "2026-10-28T10:09:03.037012+00:00"
     },
     {
       "type": "ip",
@@ -5098,7 +3994,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432679+00:00"
+      "time": "2026-10-28T10:09:03.037013+00:00"
     },
     {
       "type": "ip",
@@ -5109,7 +4005,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432680+00:00"
+      "time": "2026-10-28T10:09:03.037015+00:00"
     },
     {
       "type": "ip",
@@ -5120,7 +4016,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432682+00:00"
+      "time": "2026-10-28T10:09:03.037017+00:00"
     },
     {
       "type": "ip",
@@ -5131,7 +4027,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432683+00:00"
+      "time": "2026-10-28T10:09:03.037019+00:00"
     },
     {
       "type": "ip",
@@ -5142,7 +4038,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432684+00:00"
+      "time": "2026-10-28T10:09:03.037021+00:00"
     },
     {
       "type": "ip",
@@ -5153,7 +4049,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432686+00:00"
+      "time": "2026-10-28T10:09:03.037023+00:00"
     },
     {
       "type": "ip",
@@ -5164,7 +4060,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432687+00:00"
+      "time": "2026-10-28T10:09:03.037025+00:00"
     },
     {
       "type": "ip",
@@ -5175,7 +4071,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432688+00:00"
+      "time": "2026-10-28T10:09:03.037027+00:00"
     },
     {
       "type": "ip",
@@ -5186,7 +4082,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432690+00:00"
+      "time": "2026-10-28T10:09:03.037029+00:00"
     },
     {
       "type": "ip",
@@ -5197,7 +4093,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432691+00:00"
+      "time": "2026-10-28T10:09:03.037030+00:00"
     },
     {
       "type": "ip",
@@ -5208,7 +4104,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432693+00:00"
+      "time": "2026-10-28T10:09:03.037032+00:00"
     },
     {
       "type": "ip",
@@ -5219,7 +4115,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432694+00:00"
+      "time": "2026-10-28T10:09:03.037034+00:00"
     },
     {
       "type": "ip",
@@ -5230,7 +4126,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432695+00:00"
+      "time": "2026-10-28T10:09:03.037036+00:00"
     },
     {
       "type": "ip",
@@ -5241,7 +4137,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432701+00:00"
+      "time": "2026-10-28T10:09:03.037042+00:00"
     },
     {
       "type": "ip",
@@ -5252,7 +4148,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432703+00:00"
+      "time": "2026-10-28T10:09:03.037044+00:00"
     },
     {
       "type": "ip",
@@ -5263,7 +4159,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432704+00:00"
+      "time": "2026-10-28T10:09:03.037046+00:00"
     },
     {
       "type": "ip",
@@ -5274,7 +4170,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432706+00:00"
+      "time": "2026-10-28T10:09:03.037047+00:00"
     },
     {
       "type": "ip",
@@ -5285,7 +4181,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432707+00:00"
+      "time": "2026-10-28T10:09:03.037049+00:00"
     },
     {
       "type": "ip",
@@ -5296,7 +4192,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432709+00:00"
+      "time": "2026-10-28T10:09:03.037051+00:00"
     },
     {
       "type": "ip",
@@ -5307,7 +4203,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432710+00:00"
+      "time": "2026-10-28T10:09:03.037053+00:00"
     },
     {
       "type": "ip",
@@ -5318,7 +4214,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432711+00:00"
+      "time": "2026-10-28T10:09:03.037055+00:00"
     },
     {
       "type": "ip",
@@ -5329,7 +4225,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432713+00:00"
+      "time": "2026-10-28T10:09:03.037057+00:00"
     },
     {
       "type": "ip",
@@ -5340,7 +4236,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432714+00:00"
+      "time": "2026-10-28T10:09:03.037059+00:00"
     },
     {
       "type": "ip",
@@ -5351,7 +4247,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432715+00:00"
+      "time": "2026-10-28T10:09:03.037060+00:00"
     },
     {
       "type": "ip",
@@ -5362,7 +4258,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432717+00:00"
+      "time": "2026-10-28T10:09:03.037062+00:00"
     },
     {
       "type": "ip",
@@ -5373,7 +4269,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432719+00:00"
+      "time": "2026-10-28T10:09:03.037064+00:00"
     },
     {
       "type": "ip",
@@ -5384,7 +4280,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432720+00:00"
+      "time": "2026-10-28T10:09:03.037066+00:00"
     },
     {
       "type": "ip",
@@ -5395,7 +4291,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432721+00:00"
+      "time": "2026-10-28T10:09:03.037068+00:00"
     },
     {
       "type": "ip",
@@ -5406,7 +4302,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432723+00:00"
+      "time": "2026-10-28T10:09:03.037070+00:00"
     },
     {
       "type": "ip",
@@ -5417,7 +4313,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432724+00:00"
+      "time": "2026-10-28T10:09:03.037072+00:00"
     },
     {
       "type": "ip",
@@ -5428,7 +4324,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432726+00:00"
+      "time": "2026-10-28T10:09:03.037074+00:00"
     },
     {
       "type": "ip",
@@ -5439,7 +4335,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432727+00:00"
+      "time": "2026-10-28T10:09:03.037076+00:00"
     },
     {
       "type": "ip",
@@ -5450,7 +4346,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432728+00:00"
+      "time": "2026-10-28T10:09:03.037078+00:00"
     },
     {
       "type": "ip",
@@ -5461,7 +4357,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432730+00:00"
+      "time": "2026-10-28T10:09:03.037080+00:00"
     },
     {
       "type": "ip",
@@ -5472,7 +4368,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432731+00:00"
+      "time": "2026-10-28T10:09:03.037082+00:00"
     },
     {
       "type": "ip",
@@ -5483,7 +4379,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432732+00:00"
+      "time": "2026-10-28T10:09:03.037084+00:00"
     },
     {
       "type": "ip",
@@ -5494,7 +4390,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432734+00:00"
+      "time": "2026-10-28T10:09:03.037085+00:00"
     },
     {
       "type": "ip",
@@ -5505,7 +4401,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432735+00:00"
+      "time": "2026-10-28T10:09:03.037087+00:00"
     },
     {
       "type": "ip",
@@ -5516,7 +4412,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432736+00:00"
+      "time": "2026-10-28T10:09:03.037089+00:00"
     },
     {
       "type": "ip",
@@ -5527,7 +4423,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432738+00:00"
+      "time": "2026-10-28T10:09:03.037091+00:00"
     },
     {
       "type": "ip",
@@ -5538,7 +4434,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432739+00:00"
+      "time": "2026-10-28T10:09:03.037093+00:00"
     },
     {
       "type": "ip",
@@ -5549,7 +4445,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432741+00:00"
+      "time": "2026-10-28T10:09:03.037095+00:00"
     },
     {
       "type": "ip",
@@ -5560,7 +4456,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432742+00:00"
+      "time": "2026-10-28T10:09:03.037097+00:00"
     },
     {
       "type": "ip",
@@ -5571,7 +4467,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432743+00:00"
+      "time": "2026-10-28T10:09:03.037098+00:00"
     },
     {
       "type": "ip",
@@ -5582,7 +4478,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432745+00:00"
+      "time": "2026-10-28T10:09:03.037100+00:00"
     },
     {
       "type": "ip",
@@ -5593,7 +4489,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432746+00:00"
+      "time": "2026-10-28T10:09:03.037102+00:00"
     },
     {
       "type": "ip",
@@ -5604,7 +4500,7 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432747+00:00"
+      "time": "2026-10-28T10:09:03.037104+00:00"
     },
     {
       "type": "ip",
@@ -5615,161 +4511,172 @@
         "malware",
         "c2"
       ],
-      "time": "2026-10-27T09:26:47.432749+00:00"
+      "time": "2026-10-28T10:09:03.037105+00:00"
     },
     {
       "type": "ip",
-      "value": "1.15.14.29",
+      "value": "1.12.229.231",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083341+00:00"
+      "time": "2026-10-28T10:09:02.233592+00:00"
     },
     {
       "type": "ip",
-      "value": "1.193.57.144",
+      "value": "1.214.29.155",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083365+00:00"
+      "time": "2026-10-28T10:09:02.233611+00:00"
     },
     {
       "type": "ip",
-      "value": "1.193.63.224",
+      "value": "1.215.138.43",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083368+00:00"
+      "time": "2026-10-28T10:09:02.233614+00:00"
     },
     {
       "type": "ip",
-      "value": "1.220.119.115",
+      "value": "1.223.11.69",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083370+00:00"
+      "time": "2026-10-28T10:09:02.233616+00:00"
     },
     {
       "type": "ip",
-      "value": "1.24.16.117",
+      "value": "1.236.254.202",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083372+00:00"
+      "time": "2026-10-28T10:09:02.233618+00:00"
     },
     {
       "type": "ip",
-      "value": "1.24.16.119",
+      "value": "1.24.16.121",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083374+00:00"
+      "time": "2026-10-28T10:09:02.233620+00:00"
     },
     {
       "type": "ip",
-      "value": "1.24.16.145",
+      "value": "1.24.16.134",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083375+00:00"
+      "time": "2026-10-28T10:09:02.233623+00:00"
     },
     {
       "type": "ip",
-      "value": "1.24.16.163",
+      "value": "1.24.16.135",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083377+00:00"
+      "time": "2026-10-28T10:09:02.233624+00:00"
     },
     {
       "type": "ip",
-      "value": "1.24.16.54",
+      "value": "1.24.16.17",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083378+00:00"
+      "time": "2026-10-28T10:09:02.233626+00:00"
     },
     {
       "type": "ip",
-      "value": "1.24.16.55",
+      "value": "1.24.16.191",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083384+00:00"
+      "time": "2026-10-28T10:09:02.233632+00:00"
     },
     {
       "type": "ip",
-      "value": "1.24.16.91",
+      "value": "1.24.16.44",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083386+00:00"
+      "time": "2026-10-28T10:09:02.233634+00:00"
     },
     {
       "type": "ip",
-      "value": "1.24.16.97",
+      "value": "1.24.16.57",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083388+00:00"
+      "time": "2026-10-28T10:09:02.233637+00:00"
     },
     {
       "type": "ip",
-      "value": "1.244.184.137",
+      "value": "1.24.16.67",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083391+00:00"
+      "time": "2026-10-28T10:09:02.233640+00:00"
     },
     {
       "type": "ip",
-      "value": "1.28.125.52",
+      "value": "1.24.16.98",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083393+00:00"
+      "time": "2026-10-28T10:09:02.233642+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.24.16.99",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233644+00:00"
     },
     {
       "type": "ip",
@@ -5780,7 +4687,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083394+00:00"
+      "time": "2026-10-28T10:09:02.233646+00:00"
     },
     {
       "type": "ip",
@@ -5791,7 +4698,18 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083396+00:00"
+      "time": "2026-10-28T10:09:02.233648+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.31.32.6",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233650+00:00"
     },
     {
       "type": "ip",
@@ -5802,40 +4720,62 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083398+00:00"
+      "time": "2026-10-28T10:09:02.233652+00:00"
     },
     {
       "type": "ip",
-      "value": "1.36.198.249",
+      "value": "1.58.108.110",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083399+00:00"
+      "time": "2026-10-28T10:09:02.233655+00:00"
     },
     {
       "type": "ip",
-      "value": "1.83.125.149",
+      "value": "1.64.197.229",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083401+00:00"
+      "time": "2026-10-28T10:09:02.233657+00:00"
     },
     {
       "type": "ip",
-      "value": "1.83.125.52",
+      "value": "1.83.125.60",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083403+00:00"
+      "time": "2026-10-28T10:09:02.233659+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.83.125.69",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233661+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "1.92.114.63",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233662+00:00"
     },
     {
       "type": "ip",
@@ -5846,29 +4786,18 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083404+00:00"
+      "time": "2026-10-28T10:09:02.233664+00:00"
     },
     {
       "type": "ip",
-      "value": "2.132.220.175",
+      "value": "2.136.130.81",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083406+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.152.86.53",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083408+00:00"
+      "time": "2026-10-28T10:09:02.233668+00:00"
     },
     {
       "type": "ip",
@@ -5879,7 +4808,73 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083409+00:00"
+      "time": "2026-10-28T10:09:02.233670+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.181.179.70",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233672+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.189.254.58",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233673+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.190.160.59",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233675+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.249.179.133",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233677+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.26.161.53",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233681+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.26.161.67",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233683+00:00"
     },
     {
       "type": "ip",
@@ -5890,29 +4885,18 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083413+00:00"
+      "time": "2026-10-28T10:09:02.233684+00:00"
     },
     {
       "type": "ip",
-      "value": "2.27.248.78",
+      "value": "2.27.170.94",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083414+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.27.248.91",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083416+00:00"
+      "time": "2026-10-28T10:09:02.233686+00:00"
     },
     {
       "type": "ip",
@@ -5923,7 +4907,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083418+00:00"
+      "time": "2026-10-28T10:09:02.233688+00:00"
     },
     {
       "type": "ip",
@@ -5934,7 +4918,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083420+00:00"
+      "time": "2026-10-28T10:09:02.233690+00:00"
     },
     {
       "type": "ip",
@@ -5945,18 +4929,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083421+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.100",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083423+00:00"
+      "time": "2026-10-28T10:09:02.233692+00:00"
     },
     {
       "type": "ip",
@@ -5967,18 +4940,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083426+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.102",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083428+00:00"
+      "time": "2026-10-28T10:09:02.233693+00:00"
     },
     {
       "type": "ip",
@@ -5989,7 +4951,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083429+00:00"
+      "time": "2026-10-28T10:09:02.233695+00:00"
     },
     {
       "type": "ip",
@@ -6000,7 +4962,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083431+00:00"
+      "time": "2026-10-28T10:09:02.233697+00:00"
     },
     {
       "type": "ip",
@@ -6011,7 +4973,29 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083432+00:00"
+      "time": "2026-10-28T10:09:02.233699+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.106",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233701+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.107",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233702+00:00"
     },
     {
       "type": "ip",
@@ -6022,7 +5006,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083434+00:00"
+      "time": "2026-10-28T10:09:02.233704+00:00"
     },
     {
       "type": "ip",
@@ -6033,7 +5017,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083435+00:00"
+      "time": "2026-10-28T10:09:02.233706+00:00"
     },
     {
       "type": "ip",
@@ -6044,18 +5028,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083437+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.110",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083438+00:00"
+      "time": "2026-10-28T10:09:02.233708+00:00"
     },
     {
       "type": "ip",
@@ -6066,7 +5039,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083440+00:00"
+      "time": "2026-10-28T10:09:02.233709+00:00"
     },
     {
       "type": "ip",
@@ -6077,7 +5050,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083441+00:00"
+      "time": "2026-10-28T10:09:02.233711+00:00"
     },
     {
       "type": "ip",
@@ -6088,7 +5061,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083443+00:00"
+      "time": "2026-10-28T10:09:02.233713+00:00"
     },
     {
       "type": "ip",
@@ -6099,7 +5072,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083444+00:00"
+      "time": "2026-10-28T10:09:02.233715+00:00"
     },
     {
       "type": "ip",
@@ -6110,7 +5083,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083446+00:00"
+      "time": "2026-10-28T10:09:02.233719+00:00"
     },
     {
       "type": "ip",
@@ -6121,7 +5094,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083447+00:00"
+      "time": "2026-10-28T10:09:02.233721+00:00"
     },
     {
       "type": "ip",
@@ -6132,7 +5105,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083449+00:00"
+      "time": "2026-10-28T10:09:02.233723+00:00"
     },
     {
       "type": "ip",
@@ -6143,7 +5116,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083450+00:00"
+      "time": "2026-10-28T10:09:02.233725+00:00"
     },
     {
       "type": "ip",
@@ -6154,18 +5127,29 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083452+00:00"
+      "time": "2026-10-28T10:09:02.233726+00:00"
     },
     {
       "type": "ip",
-      "value": "2.57.17.122",
+      "value": "2.57.17.120",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083453+00:00"
+      "time": "2026-10-28T10:09:02.233728+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.121",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233732+00:00"
     },
     {
       "type": "ip",
@@ -6176,7 +5160,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083455+00:00"
+      "time": "2026-10-28T10:09:02.233734+00:00"
     },
     {
       "type": "ip",
@@ -6187,7 +5171,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083459+00:00"
+      "time": "2026-10-28T10:09:02.233736+00:00"
     },
     {
       "type": "ip",
@@ -6198,18 +5182,18 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083462+00:00"
+      "time": "2026-10-28T10:09:02.233738+00:00"
     },
     {
       "type": "ip",
-      "value": "2.57.17.126",
+      "value": "2.57.17.127",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083464+00:00"
+      "time": "2026-10-28T10:09:02.233740+00:00"
     },
     {
       "type": "ip",
@@ -6220,7 +5204,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083465+00:00"
+      "time": "2026-10-28T10:09:02.233741+00:00"
     },
     {
       "type": "ip",
@@ -6231,7 +5215,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083467+00:00"
+      "time": "2026-10-28T10:09:02.233743+00:00"
     },
     {
       "type": "ip",
@@ -6242,7 +5226,29 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083468+00:00"
+      "time": "2026-10-28T10:09:02.233745+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.130",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233747+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.131",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233749+00:00"
     },
     {
       "type": "ip",
@@ -6253,7 +5259,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083470+00:00"
+      "time": "2026-10-28T10:09:02.233751+00:00"
     },
     {
       "type": "ip",
@@ -6264,7 +5270,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083471+00:00"
+      "time": "2026-10-28T10:09:02.233752+00:00"
     },
     {
       "type": "ip",
@@ -6275,7 +5281,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083473+00:00"
+      "time": "2026-10-28T10:09:02.233754+00:00"
     },
     {
       "type": "ip",
@@ -6286,7 +5292,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083475+00:00"
+      "time": "2026-10-28T10:09:02.233758+00:00"
     },
     {
       "type": "ip",
@@ -6297,7 +5303,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083476+00:00"
+      "time": "2026-10-28T10:09:02.233760+00:00"
     },
     {
       "type": "ip",
@@ -6308,7 +5314,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083478+00:00"
+      "time": "2026-10-28T10:09:02.233761+00:00"
     },
     {
       "type": "ip",
@@ -6319,7 +5325,51 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083479+00:00"
+      "time": "2026-10-28T10:09:02.233763+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.139",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233765+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.14",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233767+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.140",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233768+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.141",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233771+00:00"
     },
     {
       "type": "ip",
@@ -6330,7 +5380,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083481+00:00"
+      "time": "2026-10-28T10:09:02.233772+00:00"
     },
     {
       "type": "ip",
@@ -6341,7 +5391,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083483+00:00"
+      "time": "2026-10-28T10:09:02.233774+00:00"
     },
     {
       "type": "ip",
@@ -6352,18 +5402,29 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083484+00:00"
+      "time": "2026-10-28T10:09:02.233776+00:00"
     },
     {
       "type": "ip",
-      "value": "2.57.17.147",
+      "value": "2.57.17.146",
       "source": "CINSscore",
       "threat": "medium",
       "tags": [
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083486+00:00"
+      "time": "2026-10-28T10:09:02.233778+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.148",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233780+00:00"
     },
     {
       "type": "ip",
@@ -6374,7 +5435,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083487+00:00"
+      "time": "2026-10-28T10:09:02.233781+00:00"
     },
     {
       "type": "ip",
@@ -6385,7 +5446,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083489+00:00"
+      "time": "2026-10-28T10:09:02.233783+00:00"
     },
     {
       "type": "ip",
@@ -6396,7 +5457,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083496+00:00"
+      "time": "2026-10-28T10:09:02.233785+00:00"
     },
     {
       "type": "ip",
@@ -6407,7 +5468,18 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083497+00:00"
+      "time": "2026-10-28T10:09:02.233787+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.153",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233788+00:00"
     },
     {
       "type": "ip",
@@ -6418,7 +5490,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083499+00:00"
+      "time": "2026-10-28T10:09:02.233790+00:00"
     },
     {
       "type": "ip",
@@ -6429,18 +5501,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083501+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.156",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083502+00:00"
+      "time": "2026-10-28T10:09:02.233794+00:00"
     },
     {
       "type": "ip",
@@ -6451,7 +5512,18 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083506+00:00"
+      "time": "2026-10-28T10:09:02.233798+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.159",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233799+00:00"
     },
     {
       "type": "ip",
@@ -6462,7 +5534,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083507+00:00"
+      "time": "2026-10-28T10:09:02.233801+00:00"
     },
     {
       "type": "ip",
@@ -6473,7 +5545,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083509+00:00"
+      "time": "2026-10-28T10:09:02.233803+00:00"
     },
     {
       "type": "ip",
@@ -6484,7 +5556,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083511+00:00"
+      "time": "2026-10-28T10:09:02.233805+00:00"
     },
     {
       "type": "ip",
@@ -6495,18 +5567,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083512+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.163",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083513+00:00"
+      "time": "2026-10-28T10:09:02.233807+00:00"
     },
     {
       "type": "ip",
@@ -6517,7 +5578,18 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083515+00:00"
+      "time": "2026-10-28T10:09:02.233809+00:00"
+    },
+    {
+      "type": "ip",
+      "value": "2.57.17.165",
+      "source": "CINSscore",
+      "threat": "medium",
+      "tags": [
+        "malicious",
+        "scanning"
+      ],
+      "time": "2026-10-28T10:09:02.233810+00:00"
     },
     {
       "type": "ip",
@@ -6528,7 +5600,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083517+00:00"
+      "time": "2026-10-28T10:09:02.233812+00:00"
     },
     {
       "type": "ip",
@@ -6539,183 +5611,7 @@
         "malicious",
         "scanning"
       ],
-      "time": "2026-10-27T09:26:46.083518+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.168",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083520+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.169",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083521+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.171",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083523+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.172",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083524+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.176",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083526+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.177",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083527+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.182",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083530+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.184",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083532+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.186",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083533+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.187",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083535+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.188",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083537+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.19",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083538+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.190",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083542+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.191",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083543+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.192",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083545+00:00"
-    },
-    {
-      "type": "ip",
-      "value": "2.57.17.193",
-      "source": "CINSscore",
-      "threat": "medium",
-      "tags": [
-        "malicious",
-        "scanning"
-      ],
-      "time": "2026-10-27T09:26:46.083546+00:00"
+      "time": "2026-10-28T10:09:02.233814+00:00"
     }
   ]
 }
